@@ -230,4 +230,98 @@
     form.reset();
     status.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
   });
+
+  /* ---------- Gallery horizontal scroller ---------- */
+  const track = $("#galleryTrack");
+  if (track) {
+    const prevBtn = $("#galPrev");
+    const nextBtn = $("#galNext");
+    const progress = $("#galleryProgress");
+    const hint = $("#galleryHint");
+    const cards = $$(".g-item", track);
+
+    const maxScroll = () => track.scrollWidth - track.clientWidth;
+    const stepSize = () => {
+      const card = cards[0];
+      const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 24;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
+    };
+
+    let hintHidden = false;
+    const hideHint = () => {
+      if (hintHidden || !hint) return;
+      hintHidden = true;
+      hint.classList.add("is-hidden");
+    };
+
+    let rafPending = false;
+    const render = () => {
+      rafPending = false;
+      const max = maxScroll();
+      const p = max > 0 ? track.scrollLeft / max : 0;
+      if (progress) progress.style.transform = `scaleX(${Math.min(1, Math.max(0, p))})`;
+      if (prevBtn) prevBtn.disabled = track.scrollLeft <= 2;
+      if (nextBtn) nextBtn.disabled = track.scrollLeft >= max - 2;
+    };
+    const onScroll = () => {
+      if (!rafPending) { rafPending = true; requestAnimationFrame(render); }
+      hideHint();
+    };
+    track.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", render, { passive: true });
+
+    const go = (dir) =>
+      track.scrollBy({ left: dir * stepSize(), behavior: reduceMotion ? "auto" : "smooth" });
+    prevBtn?.addEventListener("click", () => go(-1));
+    nextBtn?.addEventListener("click", () => go(1));
+
+    // Keyboard when the track itself is focused
+    track.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    });
+
+    // Mouse wheel -> horizontal; pass through to the page at the track's edges
+    track.addEventListener("wheel", (e) => {
+      if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // pinch or native horizontal
+      const max = maxScroll();
+      const down = e.deltaY > 0;
+      if ((down && track.scrollLeft >= max - 1) || (!down && track.scrollLeft <= 0)) return;
+      e.preventDefault();
+      track.scrollLeft += e.deltaY;
+      hideHint();
+    }, { passive: false });
+
+    // Click-and-drag with the mouse (touch uses native momentum scrolling).
+    // Mouse events are used rather than pointer events because a scroll
+    // container fires pointercancel when it takes over, which would abort the
+    // drag. Listeners live on window so the drag continues outside the track.
+    let dragging = false, startX = 0, startScroll = 0, moved = 0;
+    track.addEventListener("mousedown", (e) => {
+      if (e.button !== 0) return;
+      dragging = true; moved = 0;
+      startX = e.clientX; startScroll = track.scrollLeft;
+      e.preventDefault(); // avoid text/image selection while dragging
+    });
+    window.addEventListener("mousemove", (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (!track.classList.contains("is-dragging") && Math.abs(dx) > 4) {
+        track.classList.add("is-dragging");  // flip to "grabbing" once moving
+      }
+      moved = Math.max(moved, Math.abs(dx));
+      track.scrollLeft = startScroll - dx;
+    });
+    window.addEventListener("mouseup", () => {
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove("is-dragging");
+    });
+    // Suppress the click (which opens the lightbox) if it was actually a drag
+    track.addEventListener("click", (e) => {
+      if (moved > 6) { e.preventDefault(); e.stopPropagation(); moved = 0; }
+    }, true);
+
+    render();
+  }
 })();
