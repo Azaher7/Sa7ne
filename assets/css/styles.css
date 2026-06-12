@@ -416,12 +416,11 @@ strong { font-weight: 600; color: var(--ink); }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
 .frame-arch { border-radius: var(--r-arch); }
 
-/* Zoom on hover for interactive frames */
-.product-media img, .g-item img {
+/* Zoom on hover for product frames (kept to fixed arch frames only) */
+.product-media img {
   transition: transform .7s var(--ease);
 }
-.product:hover .product-media img,
-.g-item:hover img { transform: scale(1.05); }
+.product:hover .product-media img { transform: scale(1.05); }
 
 /* ---------- Decorative blobs ---------- */
 .blob {
@@ -688,55 +687,170 @@ strong { font-weight: 600; color: var(--ink); }
 .step h3 { margin-bottom: 0.6rem; }
 .step p { font-size: 0.95rem; color: var(--muted); }
 
-/* ---------- Gallery ---------- */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  gap: clamp(0.9rem, 1.8vw, 1.5rem);
+/* ---------- Gallery (horizontal scroll showcase) ----------
+   Large cards on a horizontal scroll-snap track: native swipe/trackpad plus
+   drag, wheel and arrow controls (JS). Card ratio matches the 3:4 photos, so
+   object-fit: cover shows each piece in full without cropping. */
+.gallery-viewport { position: relative; }
+
+.gallery-track {
+  display: flex;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  /* first/last card align with the page container; cards bleed full-width between */
+  padding-inline: calc(var(--gutter) + max(0px, (100vw - var(--maxw)) / 2));
+  scroll-padding-inline: calc(var(--gutter) + max(0px, (100vw - var(--maxw)) / 2));
+  padding-block: 0.5rem 1.25rem;
+  scrollbar-width: none;            /* Firefox */
+  cursor: grab;
 }
+.gallery-track::-webkit-scrollbar { display: none; }   /* WebKit */
+.gallery-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+.gallery-track:focus-visible {
+  outline: 2.5px solid var(--sky-700);
+  outline-offset: 4px;
+  border-radius: var(--r-lg);
+}
+
 .g-item {
+  flex: 0 0 auto;
+  height: clamp(360px, 56vh, 600px);
+  aspect-ratio: 3 / 4;              /* width derived from height; matches photo ratio */
+  scroll-snap-align: start;
   position: relative;
   overflow: hidden;
-  border-radius: var(--r);
-  box-shadow: var(--shadow-sm);
-  aspect-ratio: 3 / 4;
-  cursor: zoom-in;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
   background: var(--cream-200);
+  cursor: pointer;
+  transition: box-shadow .5s var(--ease);
 }
-.g-item.g-tall { grid-row: span 2; aspect-ratio: auto; }
-.g-item picture, .g-item img { width: 100%; height: 100%; }
+.g-item picture { display: block; height: 100%; }
+.g-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;               /* ratio matches the card → full image, no crop */
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.g-item:hover { box-shadow: var(--shadow-lg); }
 .g-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(38,34,30,.28), transparent 45%);
+  border-radius: inherit;
+  background: linear-gradient(to top, rgba(38,34,30,.30), transparent 40%);
   opacity: 0;
   transition: opacity .35s var(--ease);
+  pointer-events: none;
 }
-.g-item:hover::after { opacity: 1; }
+.g-item:hover::after, .g-item:focus-visible::after { opacity: 1; }
 .g-item::before {
   content: "⤢";
   position: absolute;
-  right: 0.9rem; bottom: 0.8rem;
+  right: 1rem; bottom: 0.95rem;
   z-index: 2;
-  width: 36px; height: 36px;
+  width: 40px; height: 40px;
   display: grid; place-content: center;
   background: var(--cream-50);
   color: var(--ink);
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 1.05rem;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity .3s var(--ease), transform .3s var(--ease);
+  pointer-events: none;
 }
-.g-item:hover::before { opacity: 1; transform: none; }
+.g-item:hover::before, .g-item:focus-visible::before { opacity: 1; transform: none; }
 
-@media (min-width: 760px) {
-  .gallery-grid { grid-auto-rows: 220px; }
-  .g-item { aspect-ratio: auto; height: 100%; grid-row: span 2; }
-  .g-item.g-tall { grid-row: span 3; }
+/* First-visit scroll hint */
+.gallery-hint {
+  position: absolute;
+  z-index: 3;
+  bottom: 1.6rem;
+  right: calc(var(--gutter) + max(0px, (100vw - var(--maxw)) / 2));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.5rem 0.95rem;
+  background: color-mix(in srgb, var(--cream-50) 86%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  box-shadow: var(--shadow-sm);
+  transition: opacity .5s var(--ease), transform .5s var(--ease);
 }
+.gallery-hint span {
+  display: inline-block;
+  font-size: 1rem;
+  animation: hintNudge 1.6s var(--ease) infinite;
+}
+.gallery-hint.is-hidden { opacity: 0; transform: translateY(8px); pointer-events: none; }
+@keyframes hintNudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+
+/* Controls: progress + arrows */
+.gallery-controls {
+  margin-top: clamp(1.25rem, 2.6vw, 2rem);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.gallery-progress {
+  flex: 1;
+  max-width: 300px;
+  height: 2px;
+  background: var(--sand-300);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.gallery-progress-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--ink);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .12s linear;
+}
+.gallery-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 0.6rem;
+}
+.g-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--sand-300);
+  background: var(--cream-50);
+  color: var(--ink);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: background .25s var(--ease), color .25s var(--ease),
+              border-color .25s var(--ease), transform .2s var(--ease), opacity .25s var(--ease);
+}
+.g-arrow svg { width: 20px; height: 20px; }
+.g-arrow:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--cream-50);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+.g-arrow:disabled { opacity: 0.32; cursor: default; }
 
 /* ---------- Testimonials ---------- */
 .quote-grid {
@@ -1024,7 +1138,6 @@ a.ci-value:hover { color: var(--sky-ink); }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .quote-grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
@@ -1039,10 +1152,13 @@ a.ci-value:hover { color: var(--sky-ink); }
   .lb-prev, .lb-next { position: absolute; bottom: -3.5rem; }
   .lb-prev { left: 30%; } .lb-next { right: 30%; }
   .lb-figure img { max-height: 70vh; }
+
+  /* Gallery: let the progress bar use the full width on phones */
+  .gallery-progress { max-width: none; }
+  .g-arrow { width: 46px; height: 46px; }
 }
 
 @media (max-width: 420px) {
-  .gallery-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
   .about-stats { gap: 1.25rem; }
 }
 

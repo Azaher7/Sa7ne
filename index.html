@@ -319,65 +319,80 @@
       </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery (horizontal scroll showcase) -->
     <section class="gallery section section-tint" id="gallery">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow reveal">Gallery</p>
           <h2 class="reveal">The studio, styled.</h2>
-          <p class="section-sub reveal">A glimpse of Sa7ne pieces at home — laid out for breakfast, gatherings and the quiet in between. Tap any image to view it larger.</p>
+          <p class="section-sub reveal">A curated glimpse of Sa7ne pieces at home. Drag, swipe or scroll sideways to explore — and tap any image to view it larger.</p>
         </header>
+      </div>
 
-        <div class="gallery-grid" id="galleryGrid">
-          <!-- items injected/enhanced by JS; markup is fully functional without JS -->
-          <a class="g-item g-tall" href="assets/img/gallery-sideboard-1200.jpg" data-caption="A marble-topped sideboard styled with blush bowls and citrus beneath the Sa7ne artwork.">
+      <div class="gallery-viewport reveal">
+        <div class="gallery-track" id="galleryTrack" tabindex="0" role="group" aria-label="Gallery of Sa7ne pieces — drag or use the arrow buttons to browse">
+          <a class="g-item" href="assets/img/gallery-sideboard-1200.jpg" data-caption="A marble-topped sideboard styled with blush bowls and citrus beneath the Sa7ne artwork.">
             <picture>
-              <source type="image/webp" srcset="assets/img/gallery-sideboard-400.webp 400w, assets/img/gallery-sideboard-600.webp 600w, assets/img/gallery-sideboard-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-sideboard-600.jpg" srcset="assets/img/gallery-sideboard-400.jpg 400w, assets/img/gallery-sideboard-600.jpg 600w, assets/img/gallery-sideboard-800.jpg 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A marble-topped sideboard styled with blush ceramic bowls and oranges beneath framed Sa7ne artwork." loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/img/gallery-sideboard-400.webp 400w, assets/img/gallery-sideboard-600.webp 600w, assets/img/gallery-sideboard-800.webp 800w, assets/img/gallery-sideboard-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-sideboard-800.jpg" srcset="assets/img/gallery-sideboard-400.jpg 400w, assets/img/gallery-sideboard-600.jpg 600w, assets/img/gallery-sideboard-800.jpg 800w, assets/img/gallery-sideboard-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A marble-topped sideboard styled with blush ceramic bowls and oranges beneath framed Sa7ne artwork." loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="g-item" href="assets/img/gallery-tablescape-1200.jpg" data-caption="A warm kitchen-island tablescape of yellow boat bowls with tomatoes, oranges and dried fruit.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-tablescape-400.webp 400w, assets/img/gallery-tablescape-600.webp 600w, assets/img/gallery-tablescape-800.webp 800w, assets/img/gallery-tablescape-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-tablescape-800.jpg" srcset="assets/img/gallery-tablescape-400.jpg 400w, assets/img/gallery-tablescape-600.jpg 600w, assets/img/gallery-tablescape-800.jpg 800w, assets/img/gallery-tablescape-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A warm kitchen-island spread of yellow boat-shaped ceramic bowls with tomatoes, oranges and dried fruit." loading="lazy" decoding="async" />
             </picture>
           </a>
           <a class="g-item" href="assets/img/gallery-blessing-plates-1200.jpg" data-caption="A white pedestal stand with plates hand-painted in blue Arabic lettering — rizq and baraka.">
             <picture>
-              <source type="image/webp" srcset="assets/img/gallery-blessing-plates-400.webp 400w, assets/img/gallery-blessing-plates-600.webp 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-blessing-plates-600.jpg" srcset="assets/img/gallery-blessing-plates-400.jpg 400w, assets/img/gallery-blessing-plates-600.jpg 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A white pedestal stand beside plates hand-painted with blue Arabic lettering and baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-tomato-bowl-1200.jpg" data-caption="A blush speckled bowl holding vine tomatoes, styled with baby's breath.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-tomato-bowl-400.webp 400w, assets/img/gallery-tomato-bowl-600.webp 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-tomato-bowl-600.jpg" srcset="assets/img/gallery-tomato-bowl-400.jpg 400w, assets/img/gallery-tomato-bowl-600.jpg 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A blush speckled ceramic bowl holding vine tomatoes, styled with baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item g-tall" href="assets/img/gallery-tablescape-1200.jpg" data-caption="A warm kitchen-island tablescape of yellow boat bowls with tomatoes, oranges and dried fruit.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-tablescape-400.webp 400w, assets/img/gallery-tablescape-600.webp 600w, assets/img/gallery-tablescape-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-tablescape-600.jpg" srcset="assets/img/gallery-tablescape-400.jpg 400w, assets/img/gallery-tablescape-600.jpg 600w, assets/img/gallery-tablescape-800.jpg 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A warm kitchen-island spread of yellow boat-shaped ceramic bowls with tomatoes, oranges and dried fruit." loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/img/gallery-blessing-plates-400.webp 400w, assets/img/gallery-blessing-plates-600.webp 600w, assets/img/gallery-blessing-plates-800.webp 800w, assets/img/gallery-blessing-plates-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-blessing-plates-800.jpg" srcset="assets/img/gallery-blessing-plates-400.jpg 400w, assets/img/gallery-blessing-plates-600.jpg 600w, assets/img/gallery-blessing-plates-800.jpg 800w, assets/img/gallery-blessing-plates-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A white pedestal stand beside plates hand-painted with blue Arabic lettering and baby's breath." loading="lazy" decoding="async" />
             </picture>
           </a>
           <a class="g-item" href="assets/img/gallery-word-plates-1200.jpg" data-caption="Hand-painted plates lettered with playful words in red and blue glaze.">
             <picture>
-              <source type="image/webp" srcset="assets/img/gallery-word-plates-400.webp 400w, assets/img/gallery-word-plates-600.webp 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-word-plates-600.jpg" srcset="assets/img/gallery-word-plates-400.jpg 400w, assets/img/gallery-word-plates-600.jpg 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="Hand-painted ceramic plates lettered with playful words in red and blue glaze, with baby's breath." loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/img/gallery-word-plates-400.webp 400w, assets/img/gallery-word-plates-600.webp 600w, assets/img/gallery-word-plates-800.webp 800w, assets/img/gallery-word-plates-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-word-plates-800.jpg" srcset="assets/img/gallery-word-plates-400.jpg 400w, assets/img/gallery-word-plates-600.jpg 600w, assets/img/gallery-word-plates-800.jpg 800w, assets/img/gallery-word-plates-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="Hand-painted ceramic plates lettered with playful words in red and blue glaze, with baby's breath." loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="g-item" href="assets/img/gallery-footed-bowl-1200.jpg" data-caption="A blush footed bowl of dragonfruit beside cherries on a glass dining table.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-footed-bowl-400.webp 400w, assets/img/gallery-footed-bowl-600.webp 600w, assets/img/gallery-footed-bowl-800.webp 800w, assets/img/gallery-footed-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-footed-bowl-800.jpg" srcset="assets/img/gallery-footed-bowl-400.jpg 400w, assets/img/gallery-footed-bowl-600.jpg 600w, assets/img/gallery-footed-bowl-800.jpg 800w, assets/img/gallery-footed-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A blush footed ceramic bowl of dragonfruit beside a bowl of cherries on a glass dining table." loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="g-item" href="assets/img/gallery-tomato-bowl-1200.jpg" data-caption="A blush speckled bowl holding vine tomatoes, styled with baby's breath.">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-tomato-bowl-400.webp 400w, assets/img/gallery-tomato-bowl-600.webp 600w, assets/img/gallery-tomato-bowl-800.webp 800w, assets/img/gallery-tomato-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-tomato-bowl-800.jpg" srcset="assets/img/gallery-tomato-bowl-400.jpg 400w, assets/img/gallery-tomato-bowl-600.jpg 600w, assets/img/gallery-tomato-bowl-800.jpg 800w, assets/img/gallery-tomato-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A blush speckled ceramic bowl holding vine tomatoes, styled with baby's breath." loading="lazy" decoding="async" />
             </picture>
           </a>
           <a class="g-item" href="assets/img/gallery-dragonfruit-bowl-1200.jpg" data-caption="A hand-built bowl holding dragonfruit, styled with baby's breath on white linen.">
             <picture>
-              <source type="image/webp" srcset="assets/img/gallery-dragonfruit-bowl-400.webp 400w, assets/img/gallery-dragonfruit-bowl-600.webp 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-dragonfruit-bowl-600.jpg" srcset="assets/img/gallery-dragonfruit-bowl-400.jpg 400w, assets/img/gallery-dragonfruit-bowl-600.jpg 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A hand-built ceramic bowl holding pink dragonfruit, styled with baby's breath on white linen." loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/img/gallery-dragonfruit-bowl-400.webp 400w, assets/img/gallery-dragonfruit-bowl-600.webp 600w, assets/img/gallery-dragonfruit-bowl-800.webp 800w, assets/img/gallery-dragonfruit-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-dragonfruit-bowl-800.jpg" srcset="assets/img/gallery-dragonfruit-bowl-400.jpg 400w, assets/img/gallery-dragonfruit-bowl-600.jpg 600w, assets/img/gallery-dragonfruit-bowl-800.jpg 800w, assets/img/gallery-dragonfruit-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A hand-built ceramic bowl holding pink dragonfruit, styled with baby's breath on white linen." loading="lazy" decoding="async" />
             </picture>
           </a>
           <a class="g-item" href="assets/img/gallery-honey-bowl-1200.jpg" data-caption="A honey-glazed ruffled bowl filled with fresh oranges.">
             <picture>
-              <source type="image/webp" srcset="assets/img/gallery-honey-bowl-400.webp 400w, assets/img/gallery-honey-bowl-600.webp 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-honey-bowl-600.jpg" srcset="assets/img/gallery-honey-bowl-400.jpg 400w, assets/img/gallery-honey-bowl-600.jpg 600w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A honey-glazed ruffled ceramic bowl filled with fresh oranges." loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/img/gallery-honey-bowl-400.webp 400w, assets/img/gallery-honey-bowl-600.webp 600w, assets/img/gallery-honey-bowl-800.webp 800w, assets/img/gallery-honey-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
+              <img src="assets/img/gallery-honey-bowl-800.jpg" srcset="assets/img/gallery-honey-bowl-400.jpg 400w, assets/img/gallery-honey-bowl-600.jpg 600w, assets/img/gallery-honey-bowl-800.jpg 800w, assets/img/gallery-honey-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A honey-glazed ruffled ceramic bowl filled with fresh oranges." loading="lazy" decoding="async" />
             </picture>
           </a>
-          <a class="g-item g-tall" href="assets/img/gallery-footed-bowl-1200.jpg" data-caption="A blush footed bowl of dragonfruit beside cherries on a glass dining table.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-footed-bowl-400.webp 400w, assets/img/gallery-footed-bowl-600.webp 600w, assets/img/gallery-footed-bowl-800.webp 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" />
-              <img src="assets/img/gallery-footed-bowl-600.jpg" srcset="assets/img/gallery-footed-bowl-400.jpg 400w, assets/img/gallery-footed-bowl-600.jpg 600w, assets/img/gallery-footed-bowl-800.jpg 800w" sizes="(min-width: 900px) 32vw, (min-width: 600px) 48vw, 92vw" width="600" height="800" alt="A blush footed ceramic bowl of dragonfruit beside a bowl of cherries on a glass dining table." loading="lazy" decoding="async" />
-            </picture>
-          </a>
+        </div>
+
+        <p class="gallery-hint" id="galleryHint" aria-hidden="true">Drag to explore <span aria-hidden="true">→</span></p>
+      </div>
+
+      <div class="container gallery-controls">
+        <div class="gallery-progress" aria-hidden="true"><span class="gallery-progress-bar" id="galleryProgress"></span></div>
+        <div class="gallery-nav">
+          <button type="button" class="g-arrow" id="galPrev" aria-label="Previous pieces" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <button type="button" class="g-arrow" id="galNext" aria-label="Next pieces">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </section>
