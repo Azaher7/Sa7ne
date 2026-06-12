@@ -416,12 +416,11 @@ strong { font-weight: 600; color: var(--ink); }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
 .frame-arch { border-radius: var(--r-arch); }
 
-/* Zoom on hover for interactive frames */
-.product-media img, .g-item img {
+/* Zoom on hover for product frames (kept to fixed arch frames only) */
+.product-media img {
   transition: transform .7s var(--ease);
 }
-.product:hover .product-media img,
-.g-item:hover img { transform: scale(1.05); }
+.product:hover .product-media img { transform: scale(1.05); }
 
 /* ---------- Decorative blobs ---------- */
 .blob {
@@ -688,31 +687,44 @@ strong { font-weight: 600; color: var(--ink); }
 .step h3 { margin-bottom: 0.6rem; }
 .step p { font-size: 0.95rem; color: var(--muted); }
 
-/* ---------- Gallery ---------- */
+/* ---------- Gallery ----------
+   True masonry via CSS multi-column: each photo renders at its natural
+   aspect ratio (height: auto) so nothing is cropped or zoomed. The card
+   adapts to the image rather than the image being forced to fill the card. */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  gap: clamp(0.9rem, 1.8vw, 1.5rem);
+  column-count: 3;
+  column-gap: clamp(0.9rem, 1.8vw, 1.5rem);
 }
 .g-item {
+  display: block;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: clamp(0.9rem, 1.8vw, 1.5rem);
   position: relative;
   overflow: hidden;
   border-radius: var(--r);
   box-shadow: var(--shadow-sm);
-  aspect-ratio: 3 / 4;
-  cursor: zoom-in;
   background: var(--cream-200);
+  cursor: zoom-in;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
 }
-.g-item.g-tall { grid-row: span 2; aspect-ratio: auto; }
-.g-item picture, .g-item img { width: 100%; height: 100%; }
+.g-item:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.g-item picture { display: block; }
+.g-item img {
+  width: 100%;
+  height: auto;          /* natural ratio — full piece always visible */
+  display: block;
+}
 .g-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(38,34,30,.28), transparent 45%);
+  border-radius: inherit;
+  background: linear-gradient(to top, rgba(38,34,30,.26), transparent 42%);
   opacity: 0;
   transition: opacity .35s var(--ease);
+  pointer-events: none;
 }
 .g-item:hover::after { opacity: 1; }
 .g-item::before {
@@ -729,14 +741,9 @@ strong { font-weight: 600; color: var(--ink); }
   opacity: 0;
   transform: translateY(6px);
   transition: opacity .3s var(--ease), transform .3s var(--ease);
+  pointer-events: none;
 }
 .g-item:hover::before { opacity: 1; transform: none; }
-
-@media (min-width: 760px) {
-  .gallery-grid { grid-auto-rows: 220px; }
-  .g-item { aspect-ratio: auto; height: 100%; grid-row: span 2; }
-  .g-item.g-tall { grid-row: span 3; }
-}
 
 /* ---------- Testimonials ---------- */
 .quote-grid {
@@ -1024,7 +1031,7 @@ a.ci-value:hover { color: var(--sky-ink); }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .quote-grid { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { column-count: 2; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
@@ -1041,8 +1048,11 @@ a.ci-value:hover { color: var(--sky-ink); }
   .lb-figure img { max-height: 70vh; }
 }
 
+@media (max-width: 560px) {
+  .gallery-grid { column-count: 1; max-width: 460px; margin-inline: auto; }
+}
+
 @media (max-width: 420px) {
-  .gallery-grid { grid-template-columns: 1fr; max-width: 360px; margin-inline: auto; }
   .about-stats { gap: 1.25rem; }
 }
 
