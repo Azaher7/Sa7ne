@@ -1,0 +1,13 @@
+# Source asset working folder (originals live in the client ZIP, not the site)
+_extracted/
+
+# OS / editor cruft
+.DS_Store
+__MACOSX/
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Dependencies / build (none required, but just in case)
+node_modules/
