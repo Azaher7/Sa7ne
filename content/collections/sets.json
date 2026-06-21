@@ -1,0 +1,11 @@
+{
+  "header": {
+    "eyebrow": "Customised Sets Collection",
+    "title": "CUSTOMISED SETS",
+    "subtitle": "Curated, coordinated ceramic sets designed around a theme — from celebratory star motifs and Arabic blessings to playful conversation-starting plates."
+  },
+  "products": [
+    { "tag": "Customised Set", "image": "images/image28.jpg", "alt": "Starlight Faith Collection", "name": "Starlight Faith Collection", "desc": "A curated celebration set pairing our Starlight Cake Stand with matching ivory side plates...", "link": "product-starlight-faith-collection.html" },
+    { "tag": "Customised Set", "image": "images/image30.jpg", "alt": "Conversationalist Collection", "name": "Conversationalist Collection", "desc": "A curated set of hand-painted plates designed to spark conversation — each featuring a pla...", "link": "product-conversationalist-collection.html" }
+  ]
+}

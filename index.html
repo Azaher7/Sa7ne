@@ -1,574 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sa7ne — Handmade Ceramics &amp; Stoneware Studio</title>
-  <meta name="description" content="Sa7ne is a small-batch ceramics studio shaping warm, characterful handmade stoneware — bowls, platters and cake stands made to gather around the table." />
-  <meta name="theme-color" content="#FBF8F2" />
-  <link rel="canonical" href="https://sa7ne.example/" />
-
-  <!-- Open Graph / social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sa7ne — Handmade Ceramics &amp; Stoneware Studio" />
-  <meta property="og:description" content="Warm, characterful handmade stoneware, shaped by hand in small batches." />
-  <meta property="og:image" content="assets/img/hero-tablescape-1200.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Icons -->
-  <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/img/brand/logo-240.png" />
-
-  <!-- Self-hosted fonts (declared in styles.css) — preload critical Latin subsets -->
-  <link rel="preload" href="assets/fonts/fraunces-300_600-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/fraunces-300_500-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/jost-var-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
-
-  <!-- Hero image preload for LCP -->
-  <link rel="preload" as="image" href="assets/img/hero-tablescape-800.webp" type="image/webp"
-        imagesrcset="assets/img/hero-tablescape-600.webp 600w, assets/img/hero-tablescape-800.webp 800w, assets/img/hero-tablescape-1200.webp 1200w"
-        imagesizes="(min-width: 980px) 46vw, 92vw" />
-
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- progressive enhancement flag: reveal animations only apply when JS is available -->
-  <script>document.documentElement.classList.add("js");</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sa7ne | صَحْني — Dress Your Tableware</title>
+<meta name="description" content="Sa7ne صَحْني — Custom handmade ceramics. Personalized speckled bowls, ruffle platters, and cake stands. Dress your dinnerware.">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<body data-cms-load="home=home">
+<nav>
+  <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Sa7ne صَحْني"></a></div>
+  <div class="nav-links">
 
-  <!-- Announcement -->
-  <div class="topbar" role="note">
-    <p>Handmade to order in small batches &nbsp;·&nbsp; Thoughtfully shipped worldwide</p>
+    <div class="nav-group">
+      <span class="nav-group-label">Customised</span>
+      <a href="sets.html" class="">CUSTOMISED SETS</a><a href="custom.html" class="">CUSTOM ORDERS</a>
+    </div>
+    <div class="nav-divider"></div>
+    <div class="nav-group">
+      <span class="nav-group-label">Ready to Buy</span>
+      <a href="bowls.html" class="">BOWLS</a><a href="platters.html" class="">PLATTERS</a><a href="risers.html" class="">PLATE RISERS</a><a href="stands.html" class="">CAKE STANDS</a>
+    </div>
+    <div class="nav-divider"></div>
+    <a href="contact.html" class="">CONTACT</a><a href="about.html" class="">ABOUT</a>
+
   </div>
+  <a href="custom.html" class="nav-cta">Create Yours ✦</a>
+</nav>
 
-  <!-- Header -->
-  <header class="site-header" id="top">
-    <div class="container nav-inner">
-      <a class="brand" href="#home" aria-label="Sa7ne — home">
-        <img src="assets/img/brand/logo-160.png" alt="Sa7ne handmade ceramics" width="170" height="91" />
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#collections" class="nav-link">Collections</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Commission a piece</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <nav aria-label="Mobile">
-        <ul>
-          <li><a href="#home" class="m-link">Home</a></li>
-          <li><a href="#about" class="m-link">About</a></li>
-          <li><a href="#collections" class="m-link">Collections</a></li>
-          <li><a href="#process" class="m-link">The Making</a></li>
-          <li><a href="#gallery" class="m-link">Gallery</a></li>
-          <li><a href="#contact" class="m-link">Contact</a></li>
-        </ul>
-        <a href="#contact" class="btn btn-primary m-cta">Commission a piece</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <span class="blob blob-butter" aria-hidden="true"></span>
-      <span class="blob blob-sky" aria-hidden="true"></span>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Handmade stoneware · Small batch</p>
-          <h1 class="hero-title reveal">Ceramics made by hand,<br /><em>made to be shared.</em></h1>
-          <p class="hero-lead reveal">Sa7ne is a small studio shaping warm, characterful stoneware — bowls, platters and stands made to hold the morning's fruit, the evening's bread, and the people you gather around them.</p>
-          <div class="hero-actions reveal">
-            <a href="#collections" class="btn btn-primary">Explore the collection</a>
-            <a href="#about" class="btn btn-ghost">Our story</a>
-          </div>
-          <ul class="hero-meta reveal" aria-label="What makes our pieces special">
-            <li><span class="dot dot-butter"></span> One of a kind</li>
-            <li><span class="dot dot-sky"></span> 100% handmade</li>
-            <li><span class="dot dot-honey"></span> Glazed &amp; kiln-fired</li>
-          </ul>
-        </div>
-
-        <div class="hero-media reveal">
-          <figure class="frame frame-arch hero-frame">
-            <picture>
-              <source type="image/webp" srcset="assets/img/hero-tablescape-400.webp 400w, assets/img/hero-tablescape-600.webp 600w, assets/img/hero-tablescape-800.webp 800w, assets/img/hero-tablescape-1200.webp 1200w" sizes="(min-width: 980px) 46vw, 92vw" />
-              <img src="assets/img/hero-tablescape-800.jpg" srcset="assets/img/hero-tablescape-400.jpg 400w, assets/img/hero-tablescape-600.jpg 600w, assets/img/hero-tablescape-800.jpg 800w, assets/img/hero-tablescape-1200.jpg 1200w" sizes="(min-width: 980px) 46vw, 92vw" width="600" height="800" alt="A bright dining room with a glass table laid with Sa7ne ceramic bowls full of oranges, lemons, strawberries and dragonfruit beneath the studio's logo artwork." fetchpriority="high" decoding="async" />
-            </picture>
-          </figure>
-          <div class="hero-badge" aria-hidden="true">
-            <span>Est.</span><strong>صحني</strong><span>Studio</span>
-          </div>
-        </div>
+<div class="hero">
+  <div class="hero-img-wrap">
+    <img src="images/hero_lifestyle3.jpg" data-cms-src="home.hero.image" alt="Sa7ne ceramic collection styled on a sideboard with fruit and gypsophila" data-cms-alt="home.hero.image_alt">
+    <div class="hero-overlay">
+      <div class="hero-tag"><div class="hero-tag-dot"></div><span data-cms="home.hero.tag">Handmade Ceramics · مصنوع يدوياً</span></div>
+      <h1 class="hero-headline"><span data-cms="home.hero.title">Dress Your </span><em data-cms="home.hero.title_em">Tableware.</em></h1>
+      <p class="hero-sub" data-cms="home.hero.subtitle">Custom ceramics designed to celebrate stories, milestones, and meaningful moments. Every piece, uniquely yours.</p>
+      <div class="hero-btns">
+        <a href="bowls.html" class="btn-p" data-cms="home.hero.primary_btn_label" data-cms-href="home.hero.primary_btn_link">✦ Shop Collection</a>
+        <a href="custom.html" class="btn-s" data-cms="home.hero.secondary_btn_label" data-cms-href="home.hero.secondary_btn_link">Create Your Own →</a>
       </div>
-      <a href="#about" class="scroll-cue reveal" aria-label="Scroll to about">
-        <span></span>
-      </a>
-    </section>
-
-    <!-- About -->
-    <section class="about section" id="about">
-      <div class="container about-grid">
-        <div class="about-media">
-          <figure class="frame frame-arch about-main reveal">
-            <picture>
-              <source type="image/webp" srcset="assets/img/story-atelier-400.webp 400w, assets/img/story-atelier-600.webp 600w, assets/img/story-atelier-800.webp 800w" sizes="(min-width: 900px) 34vw, 70vw" />
-              <img src="assets/img/story-atelier-600.jpg" srcset="assets/img/story-atelier-400.jpg 400w, assets/img/story-atelier-600.jpg 600w, assets/img/story-atelier-800.jpg 800w" sizes="(min-width: 900px) 34vw, 70vw" width="600" height="800" alt="A pedestal draped in soft white cloth holding a coiled stoneware vessel, surrounded by sprigs of baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-          <figure class="frame about-accent reveal">
-            <picture>
-              <source type="image/webp" srcset="assets/img/story-coil-400.webp 400w, assets/img/story-coil-600.webp 600w" sizes="(min-width: 900px) 20vw, 40vw" />
-              <img src="assets/img/story-coil-400.jpg" srcset="assets/img/story-coil-400.jpg 400w, assets/img/story-coil-600.jpg 600w" sizes="(min-width: 900px) 20vw, 40vw" width="400" height="533" alt="A close view of a hand-coiled cream stoneware vessel showing the maker's rolled clay rings." loading="lazy" decoding="async" />
-            </picture>
-          </figure>
-        </div>
-
-        <div class="about-copy">
-          <p class="eyebrow reveal">Our story</p>
-          <h2 class="reveal">Made by hand,<br />in small &amp; loving batches.</h2>
-          <p class="reveal"><strong>Sa7ne</strong> — <span lang="ar" dir="rtl">صحني</span> — means <em>"my plate"</em> in Arabic: the dish you reach for first, the one that carries the morning's fruit and the evening's bread to the centre of the table.</p>
-          <p class="reveal">Every piece begins as a ball of raw stoneware and is shaped entirely by hand — pinched, coiled and smoothed until it holds the gentle imperfections that make it one of a kind. We work in small batches, glaze in soft butter-yellows and sky-blues, and fire each piece slowly so it lasts for years of gathering.</p>
-          <ul class="about-stats reveal" aria-label="Studio at a glance">
-            <li><strong>100%</strong><span>Shaped by hand</span></li>
-            <li><strong>1,200°C</strong><span>Slow kiln firing</span></li>
-            <li><strong>1 of 1</strong><span>No two alike</span></li>
-          </ul>
-          <a href="#collections" class="link-arrow reveal">See the collection <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Collection -->
-    <section class="collections section section-tint" id="collections">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow reveal">The collection</p>
-          <h2 class="reveal">Pieces shaped for everyday rituals.</h2>
-          <p class="section-sub reveal">A curated edit of our most-loved forms. Each is thrown or coiled by hand and finished to order — colours and details vary a little from piece to piece, just as they should.</p>
-        </header>
-
-        <div class="product-grid">
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-butter-bowl-400.webp 400w, assets/img/piece-butter-bowl-600.webp 600w, assets/img/piece-butter-bowl-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-butter-bowl-600.jpg" srcset="assets/img/piece-butter-bowl-400.jpg 400w, assets/img/piece-butter-bowl-600.jpg 600w, assets/img/piece-butter-bowl-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="Butter-yellow hand-pinched ceramic bowl with a softly waved rim." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Butter Crest Bowl</h3>
-                <span class="tag">Made to order</span>
-              </div>
-              <p>Warm butter-yellow glaze on a hand-pinched form with a softly crested rim. Our signature piece.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-blush-bowl-400.webp 400w, assets/img/piece-blush-bowl-600.webp 600w, assets/img/piece-blush-bowl-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-blush-bowl-600.jpg" srcset="assets/img/piece-blush-bowl-400.jpg 400w, assets/img/piece-blush-bowl-600.jpg 600w, assets/img/piece-blush-bowl-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="Speckled blush-pink stoneware bowl with an organic wave edge." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Blush Ripple Bowl</h3>
-                <span class="tag">One of a kind</span>
-              </div>
-              <p>Speckled blush stoneware with a rippling, hand-formed edge — a centrepiece for fruit or flowers.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-arch-stand-400.webp 400w, assets/img/piece-arch-stand-600.webp 600w, assets/img/piece-arch-stand-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-arch-stand-600.jpg" srcset="assets/img/piece-arch-stand-400.jpg 400w, assets/img/piece-arch-stand-600.jpg 600w, assets/img/piece-arch-stand-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="White ceramic serving stand raised on sculptural sky-blue arched legs." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Azure Arch Stand</h3>
-                <span class="tag">Made to order</span>
-              </div>
-              <p>A sculptural footed stand balanced on sky-blue arches — equal parts object and everyday tableware.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-star-stand-400.webp 400w, assets/img/piece-star-stand-600.webp 600w, assets/img/piece-star-stand-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-star-stand-600.jpg" srcset="assets/img/piece-star-stand-400.jpg 400w, assets/img/piece-star-stand-600.jpg 600w, assets/img/piece-star-stand-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="Cream pedestal cake stand hand-painted with small sky-blue stars and Arabic lettering." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Starlit Cake Stand</h3>
-                <span class="tag">Made to order</span>
-              </div>
-              <p>A pedestal stand hand-painted with scattered blue stars — made for cakes, occasions and slow mornings.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-petal-dish-400.webp 400w, assets/img/piece-petal-dish-600.webp 600w, assets/img/piece-petal-dish-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-petal-dish-600.jpg" srcset="assets/img/piece-petal-dish-400.jpg 400w, assets/img/piece-petal-dish-600.jpg 600w, assets/img/piece-petal-dish-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="Shallow blush-pink ceramic serving dish with a soft petal-shaped lip." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Petal Serving Dish</h3>
-                <span class="tag">One of a kind</span>
-              </div>
-              <p>A shallow blush dish with a soft, petalled lip — perfect for olives, figs or a single ripe peach.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="product reveal">
-            <figure class="frame frame-arch product-media">
-              <picture>
-                <source type="image/webp" srcset="assets/img/piece-citrus-platter-400.webp 400w, assets/img/piece-citrus-platter-600.webp 600w, assets/img/piece-citrus-platter-800.webp 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" />
-                <img src="assets/img/piece-citrus-platter-600.jpg" srcset="assets/img/piece-citrus-platter-400.jpg 400w, assets/img/piece-citrus-platter-600.jpg 600w, assets/img/piece-citrus-platter-800.jpg 800w" sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 88vw" width="600" height="800" alt="Elongated blush ceramic platter holding fresh lemons, styled with baby's breath." loading="lazy" decoding="async" />
-              </picture>
-            </figure>
-            <div class="product-body">
-              <div class="product-row">
-                <h3>Citrus Wave Platter</h3>
-                <span class="tag">Made to order</span>
-              </div>
-              <p>An elongated, gently waved platter built for sharing — citrus, mezze and long, slow lunches.</p>
-              <a class="link-arrow" href="#contact">Enquire <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="collections-foot reveal">
-          <p>Looking for something made just for you?</p>
-          <a href="#contact" class="btn btn-primary">Commission a custom piece</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="process section" id="process">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow reveal">The making</p>
-          <h2 class="reveal">From raw clay to your table.</h2>
-          <p class="section-sub reveal">No moulds, no shortcuts — just clay, hands, fire and time. Here is how every Sa7ne piece comes to life.</p>
-        </header>
-
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step-num">01</span>
-            <span class="step-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36 L30 18 a5 5 0 0 1 7 7 L19 43 l-9 2 z"/><path d="M28 20 l7 7"/><path d="M8 12 h12 M8 7 v10"/></svg>
-            </span>
-            <h3>Design</h3>
-            <p>Every form starts with a sketch and a question: how will it be held, filled and shared? Proportion comes first.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">02</span>
-            <span class="step-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40 h28"/><path d="M14 40 c0-10 4-16 10-16 s10 6 10 16"/><ellipse cx="24" cy="22" rx="11" ry="4"/><path d="M24 6 v6 M24 12 c-3 0-5 2-5 5"/></svg>
-            </span>
-            <h3>Handcrafting</h3>
-            <p>Each piece is shaped entirely by hand — thrown on the wheel or built coil by coil, then smoothed and refined.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">03</span>
-            <span class="step-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42 c8 0 13-5 13-13 0-7-5-10-5-17 -4 3-7 4-7 9 -3-2-4-5-4-9 -5 4-9 9-9 17 0 8 5 13 12 13 z"/></svg>
-            </span>
-            <h3>Firing</h3>
-            <p>Pieces are bisque-fired, hand-glazed in our soft palette, then fired again slowly to over 1,200°C for lasting strength.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">04</span>
-            <span class="step-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8 l4 9 10 1 -7 7 2 10 -9-5 -9 5 2-10 -7-7 10-1 z"/></svg>
-            </span>
-            <h3>Finishing</h3>
-            <p>Foot rings are sanded smooth, each piece is checked by hand and signed before it sets off to find its home.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Gallery (horizontal scroll showcase) -->
-    <section class="gallery section section-tint" id="gallery">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow reveal">Gallery</p>
-          <h2 class="reveal">The studio, styled.</h2>
-          <p class="section-sub reveal">A curated glimpse of Sa7ne pieces at home. Drag, swipe or scroll sideways to explore — and tap any image to view it larger.</p>
-        </header>
-      </div>
-
-      <div class="gallery-viewport reveal">
-        <div class="gallery-track" id="galleryTrack" tabindex="0" role="group" aria-label="Gallery of Sa7ne pieces — drag or use the arrow buttons to browse">
-          <a class="g-item" href="assets/img/gallery-sideboard-1200.jpg" data-caption="A marble-topped sideboard styled with blush bowls and citrus beneath the Sa7ne artwork.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-sideboard-400.webp 400w, assets/img/gallery-sideboard-600.webp 600w, assets/img/gallery-sideboard-800.webp 800w, assets/img/gallery-sideboard-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-sideboard-800.jpg" srcset="assets/img/gallery-sideboard-400.jpg 400w, assets/img/gallery-sideboard-600.jpg 600w, assets/img/gallery-sideboard-800.jpg 800w, assets/img/gallery-sideboard-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A marble-topped sideboard styled with blush ceramic bowls and oranges beneath framed Sa7ne artwork." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-tablescape-1200.jpg" data-caption="A warm kitchen-island tablescape of yellow boat bowls with tomatoes, oranges and dried fruit.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-tablescape-400.webp 400w, assets/img/gallery-tablescape-600.webp 600w, assets/img/gallery-tablescape-800.webp 800w, assets/img/gallery-tablescape-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-tablescape-800.jpg" srcset="assets/img/gallery-tablescape-400.jpg 400w, assets/img/gallery-tablescape-600.jpg 600w, assets/img/gallery-tablescape-800.jpg 800w, assets/img/gallery-tablescape-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A warm kitchen-island spread of yellow boat-shaped ceramic bowls with tomatoes, oranges and dried fruit." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-blessing-plates-1200.jpg" data-caption="A white pedestal stand with plates hand-painted in blue Arabic lettering — rizq and baraka.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-blessing-plates-400.webp 400w, assets/img/gallery-blessing-plates-600.webp 600w, assets/img/gallery-blessing-plates-800.webp 800w, assets/img/gallery-blessing-plates-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-blessing-plates-800.jpg" srcset="assets/img/gallery-blessing-plates-400.jpg 400w, assets/img/gallery-blessing-plates-600.jpg 600w, assets/img/gallery-blessing-plates-800.jpg 800w, assets/img/gallery-blessing-plates-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A white pedestal stand beside plates hand-painted with blue Arabic lettering and baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-word-plates-1200.jpg" data-caption="Hand-painted plates lettered with playful words in red and blue glaze.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-word-plates-400.webp 400w, assets/img/gallery-word-plates-600.webp 600w, assets/img/gallery-word-plates-800.webp 800w, assets/img/gallery-word-plates-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-word-plates-800.jpg" srcset="assets/img/gallery-word-plates-400.jpg 400w, assets/img/gallery-word-plates-600.jpg 600w, assets/img/gallery-word-plates-800.jpg 800w, assets/img/gallery-word-plates-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="Hand-painted ceramic plates lettered with playful words in red and blue glaze, with baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-footed-bowl-1200.jpg" data-caption="A blush footed bowl of dragonfruit beside cherries on a glass dining table.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-footed-bowl-400.webp 400w, assets/img/gallery-footed-bowl-600.webp 600w, assets/img/gallery-footed-bowl-800.webp 800w, assets/img/gallery-footed-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-footed-bowl-800.jpg" srcset="assets/img/gallery-footed-bowl-400.jpg 400w, assets/img/gallery-footed-bowl-600.jpg 600w, assets/img/gallery-footed-bowl-800.jpg 800w, assets/img/gallery-footed-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A blush footed ceramic bowl of dragonfruit beside a bowl of cherries on a glass dining table." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-tomato-bowl-1200.jpg" data-caption="A blush speckled bowl holding vine tomatoes, styled with baby's breath.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-tomato-bowl-400.webp 400w, assets/img/gallery-tomato-bowl-600.webp 600w, assets/img/gallery-tomato-bowl-800.webp 800w, assets/img/gallery-tomato-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-tomato-bowl-800.jpg" srcset="assets/img/gallery-tomato-bowl-400.jpg 400w, assets/img/gallery-tomato-bowl-600.jpg 600w, assets/img/gallery-tomato-bowl-800.jpg 800w, assets/img/gallery-tomato-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A blush speckled ceramic bowl holding vine tomatoes, styled with baby's breath." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-dragonfruit-bowl-1200.jpg" data-caption="A hand-built bowl holding dragonfruit, styled with baby's breath on white linen.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-dragonfruit-bowl-400.webp 400w, assets/img/gallery-dragonfruit-bowl-600.webp 600w, assets/img/gallery-dragonfruit-bowl-800.webp 800w, assets/img/gallery-dragonfruit-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-dragonfruit-bowl-800.jpg" srcset="assets/img/gallery-dragonfruit-bowl-400.jpg 400w, assets/img/gallery-dragonfruit-bowl-600.jpg 600w, assets/img/gallery-dragonfruit-bowl-800.jpg 800w, assets/img/gallery-dragonfruit-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A hand-built ceramic bowl holding pink dragonfruit, styled with baby's breath on white linen." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-          <a class="g-item" href="assets/img/gallery-honey-bowl-1200.jpg" data-caption="A honey-glazed ruffled bowl filled with fresh oranges.">
-            <picture>
-              <source type="image/webp" srcset="assets/img/gallery-honey-bowl-400.webp 400w, assets/img/gallery-honey-bowl-600.webp 600w, assets/img/gallery-honey-bowl-800.webp 800w, assets/img/gallery-honey-bowl-1200.webp 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" />
-              <img src="assets/img/gallery-honey-bowl-800.jpg" srcset="assets/img/gallery-honey-bowl-400.jpg 400w, assets/img/gallery-honey-bowl-600.jpg 600w, assets/img/gallery-honey-bowl-800.jpg 800w, assets/img/gallery-honey-bowl-1200.jpg 1200w" sizes="(min-width: 980px) 30vw, (min-width: 600px) 46vw, 82vw" width="600" height="800" alt="A honey-glazed ruffled ceramic bowl filled with fresh oranges." loading="lazy" decoding="async" />
-            </picture>
-          </a>
-        </div>
-
-        <p class="gallery-hint" id="galleryHint" aria-hidden="true">Drag to explore <span aria-hidden="true">→</span></p>
-      </div>
-
-      <div class="container gallery-controls">
-        <div class="gallery-progress" aria-hidden="true"><span class="gallery-progress-bar" id="galleryProgress"></span></div>
-        <div class="gallery-nav">
-          <button type="button" class="g-arrow" id="galPrev" aria-label="Previous pieces" disabled>
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
-          </button>
-          <button type="button" class="g-arrow" id="galNext" aria-label="Next pieces">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials section" aria-labelledby="testimonials-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow reveal">Kind words</p>
-          <h2 id="testimonials-title" class="reveal">Loved at tables everywhere.</h2>
-        </header>
-        <div class="quote-grid">
-          <figure class="quote reveal">
-            <div class="stars" aria-label="Five out of five stars">★★★★★</div>
-            <blockquote>Our breakfast table hasn't looked the same since the butter bowl arrived. It's the first thing every guest reaches for.</blockquote>
-            <figcaption><strong>Layla H.</strong><span>Beirut</span></figcaption>
-          </figure>
-          <figure class="quote reveal">
-            <div class="stars" aria-label="Five out of five stars">★★★★★</div>
-            <blockquote>I commissioned a cake stand for my sister's wedding and it became the centrepiece. The craftsmanship is simply extraordinary.</blockquote>
-            <figcaption><strong>Omar K.</strong><span>Dubai</span></figcaption>
-          </figure>
-          <figure class="quote reveal">
-            <div class="stars" aria-label="Five out of five stars">★★★★★</div>
-            <blockquote>You can feel that these are made by hand. Each piece has a warmth and a soul the mass-made ones simply don't have.</blockquote>
-            <figcaption><strong>Nadia R.</strong><span>London</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact section section-tint" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-intro">
-          <p class="eyebrow reveal">Get in touch</p>
-          <h2 class="reveal">Commission a piece,<br />or just say hello.</h2>
-          <p class="reveal">Tell us what you have in mind — a wedding centrepiece, a set for your café, or a single bowl for your morning ritual. We reply to every message by hand, usually within two working days.</p>
-
-          <ul class="contact-info reveal">
-            <li>
-              <span class="ci-label">Studio</span>
-              <span class="ci-value">Atelier Sa7ne · By appointment<br />123 Olive Lane, Studio 4</span>
-            </li>
-            <li>
-              <span class="ci-label">Email</span>
-              <a class="ci-value" href="mailto:hello@sa7ne.example">hello@sa7ne.example</a>
-            </li>
-            <li>
-              <span class="ci-label">Phone</span>
-              <a class="ci-value" href="tel:+10000000000">+1 (000) 000-0000</a>
-            </li>
-            <li>
-              <span class="ci-label">Hours</span>
-              <span class="ci-value">Tue–Sat · 10am – 6pm</span>
-            </li>
-          </ul>
-
-          <div class="socials reveal" aria-label="Follow Sa7ne">
-            <a href="#" aria-label="Sa7ne on Instagram" class="social">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="Sa7ne on Pinterest" class="social">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 21 c-1-3 1-6 1-6 M12 3 a8 8 0 0 0-3 15 c0-2 1-4 1-4 a3 3 0 1 1 3 1 c2 1 5 0 5-4 a6 6 0 0 0-7-5"/></svg>
-            </a>
-            <a href="#" aria-label="Sa7ne on TikTok" class="social">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 4 c1 2 2 3 4 3 v3 c-2 0-3-1-4-2 v6 a5 5 0 1 1-5-5"/></svg>
-            </a>
-            <a href="mailto:hello@sa7ne.example" aria-label="Email Sa7ne" class="social">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7 l8 6 8-6"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-card reveal">
-          <form class="contact-form" id="contactForm" novalidate>
-            <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
-
-            <div class="field">
-              <label for="cf-name">Name</label>
-              <input type="text" id="cf-name" name="name" autocomplete="name" required />
-              <span class="error" data-for="cf-name"></span>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="cf-email">Email</label>
-                <input type="email" id="cf-email" name="email" autocomplete="email" required />
-                <span class="error" data-for="cf-email"></span>
-              </div>
-              <div class="field">
-                <label for="cf-interest">I'm interested in</label>
-                <select id="cf-interest" name="interest">
-                  <option value="A collection piece">A collection piece</option>
-                  <option value="A custom commission">A custom commission</option>
-                  <option value="Wholesale / café">Wholesale / café</option>
-                  <option value="Something else">Something else</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="message" rows="5" required></textarea>
-              <span class="error" data-for="cf-message"></span>
-            </div>
-
-            <!-- honeypot -->
-            <div class="hp" aria-hidden="true">
-              <label for="cf-company">Company</label>
-              <input type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Send message</button>
-            <p class="form-note">By sending, you agree to be contacted about your enquiry. We never share your details.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/img/brand/logo-cream-160.png" alt="Sa7ne" width="150" height="80" />
-        <p>Handmade stoneware, shaped by hand in small batches and made to gather around.</p>
-      </div>
-      <nav class="footer-col" aria-label="Explore">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-        </ul>
-      </nav>
-      <nav class="footer-col" aria-label="Studio">
-        <h4>Studio</h4>
-        <ul>
-          <li><a href="#process">The Making</a></li>
-          <li><a href="#contact">Commissions</a></li>
-          <li><a href="#contact">Wholesale</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-col footer-connect">
-        <h4>Stay in touch</h4>
-        <p><a href="mailto:hello@sa7ne.example">hello@sa7ne.example</a></p>
-        <div class="socials socials-light" aria-label="Follow Sa7ne">
-          <a href="#" aria-label="Instagram" class="social"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="Pinterest" class="social"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 21 c-1-3 1-6 1-6 M12 3 a8 8 0 0 0-3 15 c0-2 1-4 1-4 a3 3 0 1 1 3 1 c2 1 5 0 5-4 a6 6 0 0 0-7-5"/></svg></a>
-          <a href="mailto:hello@sa7ne.example" aria-label="Email" class="social"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7 l8 6 8-6"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© <span id="year">2026</span> Sa7ne Ceramics · Handmade with care.</p>
-      <a href="#top" class="to-top">Back to top <span aria-hidden="true">↑</span></a>
-    </div>
-  </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
-    <div class="lb-backdrop" data-close></div>
-    <div class="lb-dialog" role="dialog" aria-modal="true" aria-label="Image viewer">
-      <button class="lb-btn lb-close" data-close aria-label="Close">×</button>
-      <button class="lb-btn lb-prev" data-prev aria-label="Previous image">‹</button>
-      <figure class="lb-figure">
-        <img id="lbImage" src="" alt="" />
-        <figcaption id="lbCaption"></figcaption>
-      </figure>
-      <button class="lb-btn lb-next" data-next aria-label="Next image">›</button>
     </div>
   </div>
+</div>
 
-  <script src="assets/js/main.js" defer></script>
+<div class="ew cats"><div class="ei">
+  <div class="cats-hd">
+    <div><div class="eyebrow" data-cms="home.collections_section.eyebrow">Shop by Collection</div><div class="st" data-cms="home.collections_section.title">Find Your Perfect Piece</div></div>
+  </div>
+  <div class="cats-grid" data-cms-list="home.categories">
+    <a href="sets.html" class="cc" data-field-href="link">
+      <div class="cc-img"><img src="images/image27.jpg" data-field-src="image" alt="CUSTOMISED SETS Collection" data-field-alt="alt"></div>
+      <div class="cc-body"><div class="cc-title" data-field="name">CUSTOMISED SETS</div><div class="cc-count" data-field="count">2 designs</div></div>
+    </a>
+    <a href="bowls.html" class="cc">
+      <div class="cc-img"><img src="images/image1.jpg" alt="BOWLS Collection"></div>
+      <div class="cc-body"><div class="cc-title">BOWLS</div><div class="cc-count">2 designs</div></div>
+    </a>
+    <a href="platters.html" class="cc">
+      <div class="cc-img"><img src="images/image13.jpg" alt="PLATTERS Collection"></div>
+      <div class="cc-body"><div class="cc-title">PLATTERS</div><div class="cc-count">2 designs</div></div>
+    </a>
+    <a href="risers.html" class="cc">
+      <div class="cc-img"><img src="images/image21.jpg" alt="PLATE RISERS Collection"></div>
+      <div class="cc-body"><div class="cc-title">PLATE RISERS</div><div class="cc-count">3 designs</div></div>
+    </a>
+    <a href="stands.html" class="cc">
+      <div class="cc-img"><img src="images/image15.jpg" alt="CAKE STANDS Collection"></div>
+      <div class="cc-body"><div class="cc-title">CAKE STANDS</div><div class="cc-count">2 designs</div></div>
+    </a>
+  </div>
+</div></div>
+
+<div class="ew how" id="how"><div class="ei">
+  <div style="text-align:center;margin-bottom:5px"><div class="eyebrow" style="display:inline-flex">The Process</div></div>
+  <div class="st" style="text-align:center">Simple as 1, 2, 3</div>
+  <div class="ss" style="text-align:center;margin:0 auto">We make personalizing your ceramics effortless and joyful.</div>
+  <div class="how-steps">
+    <div class="sc"><div class="snum">1</div><div class="sico">🍽️</div><div class="sttl">Choose a Piece</div><div class="sdesc">Browse our bowls, platters, and cake stands. Pick the shape that feels right.</div></div>
+    <div class="sarr">→</div>
+    <div class="sc"><div class="snum">2</div><div class="sico">✏️</div><div class="sttl">Personalize It</div><div class="sdesc">Add a name, message, or direction. Choose colors, share reference images.</div></div>
+    <div class="sarr">→</div>
+    <div class="sc"><div class="snum">3</div><div class="sico">📦</div><div class="sttl">Handmade &amp; Delivered</div><div class="sdesc">Hand-painted with care. Beautifully packaged and delivered to your door.</div></div>
+  </div>
+</div></div>
+
+<div class="ew sellers" style="background:var(--warm-white)"><div class="ei">
+  <div class="cats-hd"><div><div class="eyebrow" data-cms="home.best_sellers_section.eyebrow">Most Loved</div><div class="st" data-cms="home.best_sellers_section.title">Best Sellers</div></div></div>
+  <div class="pgrid" data-cms-list="home.best_sellers">
+    <a href="product-blush-speckle-bowl.html" class="pc" data-field-href="link">
+      <div class="pimg"><span class="ptag" data-field="tag" data-field-optional>Best Seller</span><img src="images/image1.jpg" data-field-src="image" alt="Blush Speckle Bowl" data-field-alt="alt"></div>
+      <div class="pinfo"><div class="pname" data-field="name">Blush Speckle Bowl</div><div class="pdesc" data-field="desc">Soft blush pink with hand-flecked speckles and a wavy ruffled rim.</div><div class="pfoot"><div class="padd">+</div></div></div>
+    </a>
+    <a href="product-rose-ruffle-platter.html" class="pc">
+      <div class="pimg"><span class="ptag">Best Seller</span><img src="images/image4.jpg" alt="Rose Ruffle Platter"></div>
+      <div class="pinfo"><div class="pname">Rose Ruffle Platter</div><div class="pdesc">An elongated oval platter in dusty rose with a graceful ruffled rim.</div><div class="pfoot"><div class="padd">+</div></div></div>
+    </a>
+    <a href="product-arc-leg-cake-stand.html" class="pc">
+      <div class="pimg"><span class="ptag">Limited</span><img src="images/image5.jpg" alt="Arc Leg Cake Stand"></div>
+      <div class="pinfo"><div class="pname">Arc Leg Cake Stand</div><div class="pdesc">Ivory top on three colorful arched legs in teal, blue, and navy.</div><div class="pfoot"><div class="padd">+</div></div></div>
+    </a>
+    <a href="product-honey-wash-bowl.html" class="pc">
+      <div class="pimg"><span class="ptag">New</span><img src="images/image2.jpg" alt="Honey Wash Bowl"></div>
+      <div class="pinfo"><div class="pname">Honey Wash Bowl</div><div class="pdesc">Warm mustard-honey glaze with cream cloud-like washes.</div><div class="pfoot"><div class="padd">+</div></div></div>
+    </a>
+  </div>
+</div></div>
+
+<div class="ew gallery" id="gallery"><div class="ei">
+  <div style="text-align:center;margin-bottom:5px"><div class="eyebrow" style="display:inline-flex" data-cms="home.gallery_section.eyebrow">From Our Studio</div></div>
+  <div class="st" style="text-align:center" data-cms="home.gallery_section.title">Handmade with Love</div>
+  <div class="gg" data-cms-list="home.gallery">
+    <div class="gi"><img src="images/image1.jpg" data-field-src="image" alt="Blush bowl with tomatoes" data-field-alt="alt"></div>
+    <div class="gi"><img src="images/image9.jpg" alt="Honey bowl with oranges"></div>
+    <div class="gi"><img src="images/image5.jpg" alt="Arc leg cake stand"></div>
+    <div class="gi"><img src="images/image11.jpg" alt="Sand bowl with dragon fruit"></div>
+    <div class="gi"><img src="images/image13.jpg" alt="Rose platter with lemons"></div>
+    <div class="gi"><img src="images/image3.jpg" alt="Golden clay bowl"></div>
+    <div class="gi"><img src="images/image15.jpg" alt="Cake stand with peppers"></div>
+    <div class="gi"><img src="images/image8.jpg" alt="Toasted clay bowl"></div>
+  </div>
+</div></div>
+
+<div class="ew about"><div class="ei">
+  <div class="about-in">
+    <div class="av"><img src="images/image28.jpg" data-cms-src="home.about.image" alt="Sa7ne starlight cake stand and blessing plates" data-cms-alt="home.about.image_alt"></div>
+    <div class="at">
+      <div class="eyebrow" data-cms="home.about.eyebrow">Our Story</div>
+      <div class="st"><span data-cms="home.about.title_line1">Your Table Tells Your</span><br><span data-cms="home.about.title_line2">Guests Your Story</span></div>
+      <p data-cms="home.about.p1">Sa7ne — صَحْني, meaning "my plate" in Arabic — is a ceramics studio dedicated to the storytelling of a homeowner through tablescapes. Every piece is handmade, customised, and built around colour, form, and meaning — so that the table you set speaks before a single word is said.</p>
+      <p data-cms="home.about.p2">Through a collection of personalised dinnerware, Sa7ne personalises the act of hosting. It captures the personality and vocabulary of the dinner host and hostess — their colour sensibility, their warmth, their humour, their heritage — and translates it into ceramic form. A table set with Sa7ne pieces is a table that could only belong to you.</p>
+      <p data-cms="home.about.p3">Sa7ne also helps homeowners visualise their tablescape through moodboards — composing Sa7ne pieces into a curated visual so you can see your home's story told before a single piece is made.</p>
+      <div class="pills" data-cms-list="home.about.pills"><div class="pill" data-field>Handmade</div><div class="pill">Arabic Heritage</div><div class="pill">Personal Expression</div><div class="pill">Tablescape Storytelling</div><div class="pill">Moodboard Studio</div></div>
+      <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="about.html" class="btn-p" data-cms="home.about.primary_btn_label" data-cms-href="home.about.primary_btn_link">Read Our Story →</a>
+        <a href="custom.html" class="btn-s" data-cms="home.about.secondary_btn_label" data-cms-href="home.about.secondary_btn_link">Request a Moodboard →</a>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="ew testi"><div class="ei">
+  <div style="text-align:center;margin-bottom:5px"><div class="eyebrow" style="display:inline-flex" data-cms="home.testimonials_section.eyebrow">Customer Love</div></div>
+  <div class="st" style="text-align:center" data-cms="home.testimonials_section.title">What They're Saying</div>
+  <div class="tgrid" data-cms-list="home.testimonials">
+    <div class="tc"><div class="tq">"</div><div class="tt" data-field="text">The Blush Speckle Bowl is even more stunning in person. The glaze has so much depth — it's become the centerpiece of our dining table.</div><div class="ta"><div class="tav tav1" data-field="initials" data-field-class="avatar_class">NA</div><div><div class="tn" data-field="name">Nour Al-Ahmad</div><div class="tl" data-field="location">Dubai, UAE</div></div></div></div>
+    <div class="tc"><div class="tq">"</div><div class="tt">We ordered the Arc Leg Cake Stand for a birthday and it stole the show. So playful and well-made — guests kept asking where we got it.</div><div class="ta"><div class="tav tav2">SR</div><div><div class="tn">Sara Al-Rashid</div><div class="tl">Abu Dhabi, UAE</div></div></div></div>
+    <div class="tc"><div class="tq">"</div><div class="tt">The Rose Ruffle Platter is gorgeous for serving fruit. The handmade edges give it so much character — nothing like mass-produced pieces.</div><div class="ta"><div class="tav tav3">KM</div><div><div class="tn">Khalid Mansoor</div><div class="tl">Riyadh, KSA</div></div></div></div>
+  </div>
+</div></div>
+
+<div class="nl"><div class="nli">
+  <div class="eyebrow" style="display:inline-flex">Studio Insider</div>
+  <div class="st">Join the Sa7ne Studio</div>
+  <p>New collections, limited drops, and making-of stories — straight to your inbox. No noise, only clay.</p>
+  <div class="nlf"><input type="email" class="nlinput" placeholder="your@email.com"><button class="nlbtn" id="nlBtn">Subscribe ✦</button></div>
+</div></div>
+
+<footer>
+  <div class="ftop">
+    <div class="fb">
+      <div class="flogo"><img src="images/logo.png" alt="Sa7ne صَحْني" style="height:48px"></div>
+      <div class="fdesc" data-cms="settings.footer_description">Handmade ceramics celebrating personal stories. Made with love and clay.</div>
+      <div class="fsoc"><a class="fsb" data-cms-href="settings.contact.instagram_url" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a class="fsb" data-cms-href="settings.contact.pinterest_url" target="_blank" rel="noopener" aria-label="Pinterest">📌</a><a class="fsb" data-cms-href="settings.contact.whatsapp_url" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a><a class="fsb" data-cms-href-mailto="settings.contact.email" aria-label="Email">✉️</a></div>
+    </div>
+    <div class="fcol">
+      <div class="fct">CUSTOMISED</div>
+      <a href="sets.html">CUSTOMISED SETS</a>
+      <a href="custom.html">CUSTOM ORDERS</a>
+    </div>
+    <div class="fcol">
+      <div class="fct">READY TO BUY</div>
+      <a href="bowls.html">BOWLS</a>
+      <a href="platters.html">PLATTERS</a>
+      <a href="risers.html">PLATE RISERS</a>
+      <a href="stands.html">CAKE STANDS</a>
+    </div>
+    <div class="fcol">
+      <div class="fct">STUDIO</div>
+      <a href="about.html">Our Story</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#gallery">Gallery</a>
+    </div>
+    <div class="fcol">
+      <div class="fct">HELP</div>
+      <a href="contact.html">Contact Us</a>
+      <a>Shipping &amp; Delivery</a>
+      <a>Returns Policy</a>
+      <a>Care Guide</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy">© 2025 Sa7ne | صَحْني · Handmade, Heartmade <span class="fhrt">♥</span></div>
+    <div class="fcopy">Dress Your Tableware · Personalised Ceramics</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="cms.js"></script>
+<!-- Netlify Identity: catches invite / password-recovery links that land on the
+     site root and forwards the user to the CMS at /admin. Safe no-op otherwise. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
+      }
+    });
+  }
+</script>
 </body>
 </html>

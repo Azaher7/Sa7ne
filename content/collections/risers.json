@@ -1,0 +1,12 @@
+{
+  "header": {
+    "eyebrow": "Plate Risers Collection",
+    "title": "PLATE RISERS",
+    "subtitle": "Hand-coiled ribbed bowls, vessels, and serving boards in natural ivory tones — sculptural risers that add height and texture to your table styling."
+  },
+  "products": [
+    { "tag": "Bestseller", "image": "images/image16.jpg", "alt": "Plate Riser — Small", "name": "Plate Riser — Small", "desc": "Our smallest plate riser, hand-coiled in natural ivory clay with a rhythmic ribbed exterio...", "link": "product-plate-riser-small.html" },
+    { "tag": "", "image": "images/image17.jpg", "alt": "Plate Riser — Medium", "name": "Plate Riser — Medium", "desc": "The medium plate riser brings presence to the centre of a table. Hand-coiled from natural ...", "link": "product-plate-riser-medium.html" },
+    { "tag": "", "image": "images/image20.jpg", "alt": "Plate Riser — Large", "name": "Plate Riser — Large", "desc": "Our largest plate riser makes a statement on any table. The generous coiled form in natura...", "link": "product-plate-riser-large.html" }
+  ]
+}

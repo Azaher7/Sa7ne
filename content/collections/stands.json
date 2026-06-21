@@ -1,0 +1,11 @@
+{
+  "header": {
+    "eyebrow": "Cake Stands Collection",
+    "title": "CAKE STANDS",
+    "subtitle": "Sculptural serving stands with colorful arched legs and organic-edge tabletops — bold, joyful centerpieces for any celebration."
+  },
+  "products": [
+    { "tag": "", "image": "images/image6.jpg", "alt": "Colorblock Serving Stand", "name": "Colorblock Serving Stand", "desc": "Featuring the same playful arched leg design with a smooth ivory tabletop, perfect for ele...", "link": "product-colorblock-serving-stand.html" },
+    { "tag": "New", "image": "images/image27.jpg", "alt": "Starlight Cake Stand", "name": "Starlight Cake Stand", "desc": "An elegant ivory cake stand with a hand-painted star motif in cobalt blue, paired beautifu...", "link": "product-starlight-cake-stand.html" }
+  ]
+}

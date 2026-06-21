@@ -1,0 +1,27 @@
+{
+  "header": {
+    "eyebrow": "Get in Touch",
+    "title": "We'd Love to Hear From You",
+    "subtitle": "For orders, collaborations, moodboard requests, or any questions — reach out below. We aim to respond within 24 hours."
+  },
+  "whatsapp": {
+    "title": "WhatsApp Business",
+    "desc": "Chat with us directly — fastest response",
+    "cta": "Open WhatsApp →"
+  },
+  "email": {
+    "title": "Email Us",
+    "note": "We reply within 24 hours"
+  },
+  "instagram": {
+    "title": "Instagram",
+    "note": "See our latest pieces →"
+  },
+  "hours": {
+    "title": "Studio Hours",
+    "line1": "Monday – Friday: 9am – 6pm",
+    "line2": "Saturday: 10am – 4pm",
+    "line3": "Sunday: Closed",
+    "timezone": "UAE time (GST +4)"
+  }
+}
