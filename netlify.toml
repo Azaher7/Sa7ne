@@ -7,14 +7,9 @@
   # No build command: nothing to compile. Decap CMS commits content changes
   # directly to the repo, and Netlify redeploys the static files.
 
-# Cache fixed assets aggressively...
+# Cache images aggressively (studio photos + CMS uploads both live here)...
 [[headers]]
   for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=2592000"
-
-[[headers]]
-  for = "/assets/uploads/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
 

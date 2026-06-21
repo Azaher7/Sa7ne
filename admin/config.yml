@@ -12,9 +12,10 @@ backend:
 # Lets you preview the CMS locally with `npx decap-server` (ignored in production).
 local_backend: true
 
-# Uploaded images are committed here and served from /assets/uploads/...
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+# The media library shows everything in this folder, so the client can pick from
+# the existing studio photos. New uploads are committed here too.
+media_folder: "images"
+public_folder: "/images"
 
 # Friendlier default commit messages in the Git history
 slug:
@@ -25,6 +26,8 @@ collections:
   # ---------------------------------------------------------------- Site Settings
   - name: settings
     label: "Site Settings"
+    label_singular: "Site Settings"
+    description: "Footer text and the contact / social links used across the whole site."
     delete: false
     editor: { preview: false }
     files:
@@ -37,7 +40,7 @@ collections:
           - label: "Contact & Social Links"
             name: contact
             widget: object
-            hint: "These power the footer icons and the Contact page cards."
+            hint: "These power the footer icons and the Contact page cards. Leave a link blank to disable that icon."
             fields:
               - { label: "Email address", name: email, widget: string, required: false }
               - { label: "WhatsApp link (e.g. https://wa.me/9715...)", name: whatsapp_url, widget: string, required: false }
@@ -48,17 +51,19 @@ collections:
   # ----------------------------------------------------------------------- Pages
   - name: pages
     label: "Pages"
+    description: "The main marketing pages. Each section below is collapsed — click one to edit it."
     delete: false
+    editor: { preview: false }
     files:
       # --------------------------------------------------------------- Home page
       - name: home
         label: "Home Page"
         file: "content/home.json"
-        editor: { preview: false }
         fields:
           - label: "Hero"
             name: hero
             widget: object
+            collapsed: true
             fields:
               - { label: "Tagline", name: tag, widget: string }
               - { label: "Headline (text before the highlighted word)", name: title, widget: string }
@@ -73,12 +78,15 @@ collections:
           - label: "‘Shop by Collection’ heading"
             name: collections_section
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
           - label: "Collection cards"
             name: categories
             widget: list
+            label_singular: "collection card"
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - { label: "Name", name: name, widget: string }
@@ -89,12 +97,15 @@ collections:
           - label: "‘Best Sellers’ heading"
             name: best_sellers_section
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
           - label: "Best sellers"
             name: best_sellers
             widget: list
+            label_singular: "best seller"
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - { label: "Badge (optional)", name: tag, widget: string, required: false }
@@ -106,18 +117,23 @@ collections:
           - label: "‘Gallery’ heading"
             name: gallery_section
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
           - label: "Gallery images"
             name: gallery
             widget: list
+            label_singular: "photo"
+            collapsed: true
+            summary: "{{fields.alt}}"
             fields:
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt", name: alt, widget: string, required: false }
           - label: "About / Story block"
             name: about
             widget: object
+            collapsed: true
             fields:
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt", name: image_alt, widget: string, required: false }
@@ -135,12 +151,15 @@ collections:
           - label: "‘Testimonials’ heading"
             name: testimonials_section
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
           - label: "Testimonials"
             name: testimonials
             widget: list
+            label_singular: "testimonial"
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - { label: "Quote", name: text, widget: text }
@@ -153,11 +172,11 @@ collections:
       - name: about
         label: "About Page"
         file: "content/about.json"
-        editor: { preview: false }
         fields:
           - label: "Page header"
             name: header
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -165,6 +184,7 @@ collections:
           - label: "Intro block"
             name: intro
             widget: object
+            collapsed: true
             fields:
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt", name: image_alt, widget: string, required: false }
@@ -176,6 +196,7 @@ collections:
           - label: "Philosophy block"
             name: philosophy
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -185,6 +206,7 @@ collections:
           - label: "Personality block"
             name: personality
             widget: object
+            collapsed: true
             fields:
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt", name: image_alt, widget: string, required: false }
@@ -196,6 +218,7 @@ collections:
           - label: "Moodboard block"
             name: moodboard
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -207,18 +230,24 @@ collections:
           - label: "Gallery images"
             name: gallery
             widget: list
+            label_singular: "photo"
+            collapsed: true
+            summary: "{{fields.alt}}"
             fields:
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt", name: alt, widget: string, required: false }
           - label: "‘The Sa7ne Way’ heading"
             name: values_section
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
           - label: "Values (exactly three shown)"
             name: values
             widget: list
+            label_singular: "value"
+            collapsed: true
             max: 3
             summary: "{{fields.title}}"
             fields:
@@ -228,6 +257,7 @@ collections:
           - label: "Closing call-to-action"
             name: cta
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -237,11 +267,11 @@ collections:
       - name: contact
         label: "Contact Page"
         file: "content/contact.json"
-        editor: { preview: false }
         fields:
           - label: "Page header"
             name: header
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -249,6 +279,7 @@ collections:
           - label: "WhatsApp card"
             name: whatsapp
             widget: object
+            collapsed: true
             hint: "The WhatsApp link itself lives in Site Settings → Contact & Social Links."
             fields:
               - { label: "Title", name: title, widget: string }
@@ -257,6 +288,7 @@ collections:
           - label: "Email card"
             name: email
             widget: object
+            collapsed: true
             hint: "The email address itself lives in Site Settings → Contact & Social Links."
             fields:
               - { label: "Title", name: title, widget: string }
@@ -264,6 +296,7 @@ collections:
           - label: "Instagram card"
             name: instagram
             widget: object
+            collapsed: true
             hint: "The Instagram link/handle live in Site Settings → Contact & Social Links."
             fields:
               - { label: "Title", name: title, widget: string }
@@ -271,6 +304,7 @@ collections:
           - label: "Studio hours"
             name: hours
             widget: object
+            collapsed: true
             fields:
               - { label: "Title", name: title, widget: string }
               - { label: "Line 1", name: line1, widget: string }
@@ -281,6 +315,7 @@ collections:
   # ------------------------------------------------------------ Shop Collections
   - name: collections
     label: "Shop Collections"
+    description: "Each collection page: its heading and the product cards shown on it."
     delete: false
     editor: { preview: false }
     files:
@@ -291,6 +326,7 @@ collections:
           - label: "Page header"
             name: header
             widget: object
+            collapsed: true
             fields:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Title", name: title, widget: string }
@@ -298,6 +334,8 @@ collections:
           - label: "Products"
             name: products
             widget: list
+            label_singular: "product"
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - { label: "Badge (optional)", name: tag, widget: string, required: false }

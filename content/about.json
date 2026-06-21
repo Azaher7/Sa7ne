@@ -5,7 +5,7 @@
     "subtitle": "Sa7ne is not just dinnerware. It is the vocabulary of your home — handcrafted, personalised, and entirely yours."
   },
   "intro": {
-    "image": "images/image28.jpg",
+    "image": "/images/image28.jpg",
     "image_alt": "Starlight cake stand with blessing plates — a Sa7ne tablescape",
     "eyebrow": "صَحْني — My Plate",
     "title": "A Tablescape Is a Self-Portrait",
@@ -21,7 +21,7 @@
     "p3": "Sa7ne captures the personality and vocabulary of the dinner host and hostess — their colour sensibility, their warmth, their humour, their heritage — and translates it into ceramic form. A table set with Sa7ne pieces is a table that could only belong to you."
   },
   "personality": {
-    "image": "images/image30.jpg",
+    "image": "/images/image30.jpg",
     "image_alt": "Conversationalist collection — plates with Khaleeji phrases",
     "eyebrow": "Personality in Every Piece",
     "title": "Your Colour. Your Words. Your Table.",
@@ -39,14 +39,14 @@
     "button_link": "custom.html"
   },
   "gallery": [
-    { "image": "images/image1.jpg", "alt": "Blush speckle bowl" },
-    { "image": "images/image28.jpg", "alt": "Starlight cake stand and plates" },
-    { "image": "images/image6.jpg", "alt": "Colorblock serving stand" },
-    { "image": "images/image13.jpg", "alt": "Rose ruffle platter with lemons" },
-    { "image": "images/image30.jpg", "alt": "Conversationalist plates" },
-    { "image": "images/image17.jpg", "alt": "Ribbed coil bowl set" },
-    { "image": "images/image2.jpg", "alt": "Honey wash bowl" },
-    { "image": "images/hero_lifestyle3.jpg", "alt": "Sa7ne full table setting" }
+    { "image": "/images/image1.jpg", "alt": "Blush speckle bowl" },
+    { "image": "/images/image28.jpg", "alt": "Starlight cake stand and plates" },
+    { "image": "/images/image6.jpg", "alt": "Colorblock serving stand" },
+    { "image": "/images/image13.jpg", "alt": "Rose ruffle platter with lemons" },
+    { "image": "/images/image30.jpg", "alt": "Conversationalist plates" },
+    { "image": "/images/image17.jpg", "alt": "Ribbed coil bowl set" },
+    { "image": "/images/image2.jpg", "alt": "Honey wash bowl" },
+    { "image": "/images/hero_lifestyle3.jpg", "alt": "Sa7ne full table setting" }
   ],
   "values_section": {
     "eyebrow": "What We Stand For",

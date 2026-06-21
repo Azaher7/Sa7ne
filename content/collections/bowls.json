@@ -5,7 +5,7 @@
     "subtitle": "Hand-shaped bowls with organic ruffled rims, speckled glazes, and warm Mediterranean tones — perfect for fruit, salads, or as a centerpiece."
   },
   "products": [
-    { "tag": "Best Seller", "image": "images/image1.jpg", "alt": "Blush Speckle Bowl", "name": "Blush Speckle Bowl", "desc": "A soft blush pink bowl with hand-flecked dark speckles, finished with our signature wavy r...", "link": "product-blush-speckle-bowl.html" },
-    { "tag": "New", "image": "images/image2.jpg", "alt": "Honey Wash Bowl", "name": "Honey Wash Bowl", "desc": "A warm mustard-honey glaze with soft cream cloud-like washes, hand-shaped with an organic ...", "link": "product-honey-wash-bowl.html" }
+    { "tag": "Best Seller", "image": "/images/image1.jpg", "alt": "Blush Speckle Bowl", "name": "Blush Speckle Bowl", "desc": "A soft blush pink bowl with hand-flecked dark speckles, finished with our signature wavy r...", "link": "product-blush-speckle-bowl.html" },
+    { "tag": "New", "image": "/images/image2.jpg", "alt": "Honey Wash Bowl", "name": "Honey Wash Bowl", "desc": "A warm mustard-honey glaze with soft cream cloud-like washes, hand-shaped with an organic ...", "link": "product-honey-wash-bowl.html" }
   ]
 }

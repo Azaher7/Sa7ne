@@ -4,7 +4,7 @@
     "title": "Dress Your ",
     "title_em": "Tableware.",
     "subtitle": "Custom ceramics designed to celebrate stories, milestones, and meaningful moments. Every piece, uniquely yours.",
-    "image": "images/hero_lifestyle3.jpg",
+    "image": "/images/hero_lifestyle3.jpg",
     "image_alt": "Sa7ne ceramic collection styled on a sideboard with fruit and gypsophila",
     "primary_btn_label": "✦ Shop Collection",
     "primary_btn_link": "bowls.html",
@@ -16,38 +16,38 @@
     "title": "Find Your Perfect Piece"
   },
   "categories": [
-    { "name": "CUSTOMISED SETS", "count": "2 designs", "image": "images/image27.jpg", "alt": "CUSTOMISED SETS Collection", "link": "sets.html" },
-    { "name": "BOWLS", "count": "2 designs", "image": "images/image1.jpg", "alt": "BOWLS Collection", "link": "bowls.html" },
-    { "name": "PLATTERS", "count": "2 designs", "image": "images/image13.jpg", "alt": "PLATTERS Collection", "link": "platters.html" },
-    { "name": "PLATE RISERS", "count": "3 designs", "image": "images/image21.jpg", "alt": "PLATE RISERS Collection", "link": "risers.html" },
-    { "name": "CAKE STANDS", "count": "2 designs", "image": "images/image15.jpg", "alt": "CAKE STANDS Collection", "link": "stands.html" }
+    { "name": "CUSTOMISED SETS", "count": "2 designs", "image": "/images/image27.jpg", "alt": "CUSTOMISED SETS Collection", "link": "sets.html" },
+    { "name": "BOWLS", "count": "2 designs", "image": "/images/image1.jpg", "alt": "BOWLS Collection", "link": "bowls.html" },
+    { "name": "PLATTERS", "count": "2 designs", "image": "/images/image13.jpg", "alt": "PLATTERS Collection", "link": "platters.html" },
+    { "name": "PLATE RISERS", "count": "3 designs", "image": "/images/image21.jpg", "alt": "PLATE RISERS Collection", "link": "risers.html" },
+    { "name": "CAKE STANDS", "count": "2 designs", "image": "/images/image15.jpg", "alt": "CAKE STANDS Collection", "link": "stands.html" }
   ],
   "best_sellers_section": {
     "eyebrow": "Most Loved",
     "title": "Best Sellers"
   },
   "best_sellers": [
-    { "tag": "Best Seller", "image": "images/image1.jpg", "alt": "Blush Speckle Bowl", "name": "Blush Speckle Bowl", "desc": "Soft blush pink with hand-flecked speckles and a wavy ruffled rim.", "link": "product-blush-speckle-bowl.html" },
-    { "tag": "Best Seller", "image": "images/image4.jpg", "alt": "Rose Ruffle Platter", "name": "Rose Ruffle Platter", "desc": "An elongated oval platter in dusty rose with a graceful ruffled rim.", "link": "product-rose-ruffle-platter.html" },
-    { "tag": "Limited", "image": "images/image5.jpg", "alt": "Arc Leg Cake Stand", "name": "Arc Leg Cake Stand", "desc": "Ivory top on three colorful arched legs in teal, blue, and navy.", "link": "product-arc-leg-cake-stand.html" },
-    { "tag": "New", "image": "images/image2.jpg", "alt": "Honey Wash Bowl", "name": "Honey Wash Bowl", "desc": "Warm mustard-honey glaze with cream cloud-like washes.", "link": "product-honey-wash-bowl.html" }
+    { "tag": "Best Seller", "image": "/images/image1.jpg", "alt": "Blush Speckle Bowl", "name": "Blush Speckle Bowl", "desc": "Soft blush pink with hand-flecked speckles and a wavy ruffled rim.", "link": "product-blush-speckle-bowl.html" },
+    { "tag": "Best Seller", "image": "/images/image4.jpg", "alt": "Rose Ruffle Platter", "name": "Rose Ruffle Platter", "desc": "An elongated oval platter in dusty rose with a graceful ruffled rim.", "link": "product-rose-ruffle-platter.html" },
+    { "tag": "Limited", "image": "/images/image5.jpg", "alt": "Arc Leg Cake Stand", "name": "Arc Leg Cake Stand", "desc": "Ivory top on three colorful arched legs in teal, blue, and navy.", "link": "product-arc-leg-cake-stand.html" },
+    { "tag": "New", "image": "/images/image2.jpg", "alt": "Honey Wash Bowl", "name": "Honey Wash Bowl", "desc": "Warm mustard-honey glaze with cream cloud-like washes.", "link": "product-honey-wash-bowl.html" }
   ],
   "gallery_section": {
     "eyebrow": "From Our Studio",
     "title": "Handmade with Love"
   },
   "gallery": [
-    { "image": "images/image1.jpg", "alt": "Blush bowl with tomatoes" },
-    { "image": "images/image9.jpg", "alt": "Honey bowl with oranges" },
-    { "image": "images/image5.jpg", "alt": "Arc leg cake stand" },
-    { "image": "images/image11.jpg", "alt": "Sand bowl with dragon fruit" },
-    { "image": "images/image13.jpg", "alt": "Rose platter with lemons" },
-    { "image": "images/image3.jpg", "alt": "Golden clay bowl" },
-    { "image": "images/image15.jpg", "alt": "Cake stand with peppers" },
-    { "image": "images/image8.jpg", "alt": "Toasted clay bowl" }
+    { "image": "/images/image1.jpg", "alt": "Blush bowl with tomatoes" },
+    { "image": "/images/image9.jpg", "alt": "Honey bowl with oranges" },
+    { "image": "/images/image5.jpg", "alt": "Arc leg cake stand" },
+    { "image": "/images/image11.jpg", "alt": "Sand bowl with dragon fruit" },
+    { "image": "/images/image13.jpg", "alt": "Rose platter with lemons" },
+    { "image": "/images/image3.jpg", "alt": "Golden clay bowl" },
+    { "image": "/images/image15.jpg", "alt": "Cake stand with peppers" },
+    { "image": "/images/image8.jpg", "alt": "Toasted clay bowl" }
   ],
   "about": {
-    "image": "images/image28.jpg",
+    "image": "/images/image28.jpg",
     "image_alt": "Sa7ne starlight cake stand and blessing plates",
     "eyebrow": "Our Story",
     "title_line1": "Your Table Tells Your",
