@@ -1,0 +1,11 @@
+{
+  "header": {
+    "eyebrow": "Platters Collection",
+    "title": "PLATTERS",
+    "subtitle": "Elongated oval platters with graceful ruffled edges, ideal for serving citrus, bread, or as a striking table centerpiece."
+  },
+  "products": [
+    { "tag": "Best Seller", "image": "images/image13.jpg", "alt": "Rose Ruffle Platter", "name": "Rose Ruffle Platter", "desc": "An elongated oval platter in dusty rose, with a graceful ruffled rim that flows like fabri...", "link": "product-rose-ruffle-platter.html" },
+    { "tag": "Gift Sets", "image": "images/image24.jpg", "alt": "Dessert Serving Board", "name": "Dessert Serving Board", "desc": "An organically-shaped serving board, hand-stamped with the Sa7ne logo, designed for showca...", "link": "product-dessert-serving-board.html" }
+  ]
+}

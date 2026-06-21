@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sa7ne">
-  <rect width="64" height="64" rx="16" fill="#FBF8F2"/>
-  <g stroke="#6E8CA9" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M15 30 a17 13 0 0 0 34 0 Z" fill="#F1DC8E"/>
-    <ellipse cx="32" cy="30" rx="17" ry="5" fill="#FBF3CF"/>
-    <path d="M32 41 v5" />
-  </g>
-</svg>

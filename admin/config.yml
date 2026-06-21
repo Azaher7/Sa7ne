@@ -1,0 +1,324 @@
+# Decap CMS configuration for Sa7ne
+# Docs: https://decapcms.org/docs/
+#
+# Auth is handled by Netlify Identity + Git Gateway (no secrets stored here).
+# When the client saves, Decap commits the change to the branch below and
+# Netlify rebuilds/redeploys automatically.
+
+backend:
+  name: git-gateway
+  branch: main # IMPORTANT: must match the branch Netlify deploys (your production branch)
+
+# Lets you preview the CMS locally with `npx decap-server` (ignored in production).
+local_backend: true
+
+# Uploaded images are committed here and served from /assets/uploads/...
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Friendlier default commit messages in the Git history
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ---------------------------------------------------------------- Site Settings
+  - name: settings
+    label: "Site Settings"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: general
+        label: "General, Footer & Social"
+        file: "content/settings.json"
+        fields:
+          - { label: "Logo alt text", name: brand_alt, widget: string }
+          - { label: "Footer description", name: footer_description, widget: text }
+          - label: "Contact & Social Links"
+            name: contact
+            widget: object
+            hint: "These power the footer icons and the Contact page cards."
+            fields:
+              - { label: "Email address", name: email, widget: string, required: false }
+              - { label: "WhatsApp link (e.g. https://wa.me/9715...)", name: whatsapp_url, widget: string, required: false }
+              - { label: "Instagram link", name: instagram_url, widget: string, required: false }
+              - { label: "Instagram handle (e.g. @sa7ne)", name: instagram_handle, widget: string, required: false }
+              - { label: "Pinterest link", name: pinterest_url, widget: string, required: false }
+
+  # ----------------------------------------------------------------------- Pages
+  - name: pages
+    label: "Pages"
+    delete: false
+    files:
+      # --------------------------------------------------------------- Home page
+      - name: home
+        label: "Home Page"
+        file: "content/home.json"
+        editor: { preview: false }
+        fields:
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Tagline", name: tag, widget: string }
+              - { label: "Headline (text before the highlighted word)", name: title, widget: string }
+              - { label: "Headline — highlighted word", name: title_em, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Image alt text", name: image_alt, widget: string, required: false }
+              - { label: "Primary button — label", name: primary_btn_label, widget: string }
+              - { label: "Primary button — link", name: primary_btn_link, widget: string }
+              - { label: "Secondary button — label", name: secondary_btn_label, widget: string }
+              - { label: "Secondary button — link", name: secondary_btn_link, widget: string }
+          - label: "‘Shop by Collection’ heading"
+            name: collections_section
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+          - label: "Collection cards"
+            name: categories
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Count label", name: count, widget: string, required: false }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: alt, widget: string, required: false }
+              - { label: "Links to (page)", name: link, widget: string }
+          - label: "‘Best Sellers’ heading"
+            name: best_sellers_section
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+          - label: "Best sellers"
+            name: best_sellers
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Badge (optional)", name: tag, widget: string, required: false }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: alt, widget: string, required: false }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Description", name: desc, widget: text }
+              - { label: "Links to (product page)", name: link, widget: string }
+          - label: "‘Gallery’ heading"
+            name: gallery_section
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+          - label: "Gallery images"
+            name: gallery
+            widget: list
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: alt, widget: string, required: false }
+          - label: "About / Story block"
+            name: about
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: image_alt, widget: string, required: false }
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title — line 1", name: title_line1, widget: string }
+              - { label: "Title — line 2", name: title_line2, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Paragraph 3", name: p3, widget: text }
+              - { label: "Pills / tags", name: pills, widget: list }
+              - { label: "Primary button — label", name: primary_btn_label, widget: string }
+              - { label: "Primary button — link", name: primary_btn_link, widget: string }
+              - { label: "Secondary button — label", name: secondary_btn_label, widget: string }
+              - { label: "Secondary button — link", name: secondary_btn_link, widget: string }
+          - label: "‘Testimonials’ heading"
+            name: testimonials_section
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+          - label: "Testimonials"
+            name: testimonials
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Quote", name: text, widget: text }
+              - { label: "Initials", name: initials, widget: string }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Location", name: location, widget: string }
+              - { label: "Avatar colour", name: avatar_class, widget: select, options: ["tav1", "tav2", "tav3"], default: "tav1" }
+
+      # -------------------------------------------------------------- About page
+      - name: about
+        label: "About Page"
+        file: "content/about.json"
+        editor: { preview: false }
+        fields:
+          - label: "Page header"
+            name: header
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+          - label: "Intro block"
+            name: intro
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: image_alt, widget: string, required: false }
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Paragraph 3", name: p3, widget: text }
+          - label: "Philosophy block"
+            name: philosophy
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Paragraph 3", name: p3, widget: text }
+          - label: "Personality block"
+            name: personality
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: image_alt, widget: string, required: false }
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Paragraph 3", name: p3, widget: text }
+          - label: "Moodboard block"
+            name: moodboard
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Paragraph 1", name: p1, widget: text }
+              - { label: "Paragraph 2", name: p2, widget: text }
+              - { label: "Paragraph 3", name: p3, widget: text }
+              - { label: "Button — label", name: button_label, widget: string }
+              - { label: "Button — link", name: button_link, widget: string }
+          - label: "Gallery images"
+            name: gallery
+            widget: list
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: alt, widget: string, required: false }
+          - label: "‘The Sa7ne Way’ heading"
+            name: values_section
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+          - label: "Values (exactly three shown)"
+            name: values
+            widget: list
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon (emoji)", name: icon, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: desc, widget: text }
+          - label: "Closing call-to-action"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+
+      # ------------------------------------------------------------ Contact page
+      - name: contact
+        label: "Contact Page"
+        file: "content/contact.json"
+        editor: { preview: false }
+        fields:
+          - label: "Page header"
+            name: header
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+          - label: "WhatsApp card"
+            name: whatsapp
+            widget: object
+            hint: "The WhatsApp link itself lives in Site Settings → Contact & Social Links."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: desc, widget: string }
+              - { label: "Call to action", name: cta, widget: string }
+          - label: "Email card"
+            name: email
+            widget: object
+            hint: "The email address itself lives in Site Settings → Contact & Social Links."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Note", name: note, widget: string }
+          - label: "Instagram card"
+            name: instagram
+            widget: object
+            hint: "The Instagram link/handle live in Site Settings → Contact & Social Links."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Note", name: note, widget: string }
+          - label: "Studio hours"
+            name: hours
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Line 1", name: line1, widget: string }
+              - { label: "Line 2", name: line2, widget: string }
+              - { label: "Line 3", name: line3, widget: string }
+              - { label: "Timezone", name: timezone, widget: string }
+
+  # ------------------------------------------------------------ Shop Collections
+  - name: collections
+    label: "Shop Collections"
+    delete: false
+    editor: { preview: false }
+    files:
+      - name: bowls
+        label: "Bowls"
+        file: "content/collections/bowls.json"
+        fields: &collection_fields
+          - label: "Page header"
+            name: header
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+          - label: "Products"
+            name: products
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Badge (optional)", name: tag, widget: string, required: false }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt", name: alt, widget: string, required: false }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Description", name: desc, widget: text }
+              - { label: "Links to (product page)", name: link, widget: string }
+      - name: platters
+        label: "Platters"
+        file: "content/collections/platters.json"
+        fields: *collection_fields
+      - name: risers
+        label: "Plate Risers"
+        file: "content/collections/risers.json"
+        fields: *collection_fields
+      - name: stands
+        label: "Cake Stands"
+        file: "content/collections/stands.json"
+        fields: *collection_fields
+      - name: sets
+        label: "Customised Sets"
+        file: "content/collections/sets.json"
+        fields: *collection_fields
