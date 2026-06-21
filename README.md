@@ -37,9 +37,7 @@ Any static server works (`npx serve`, `php -S`, nginx, …).
 ├── styles.css                  # design system + all styles
 ├── script.js                   # original interactions (selectors, form feedback)
 ├── cms.js                      # tiny content‑hydration layer (reads /content JSON)
-├── images/                     # original photography + logo
-├── assets/
-│   └── uploads/                # NEW images uploaded via the CMS land here
+├── images/                     # all photography + logo (also the CMS media library)
 ├── content/                    # ← EDITABLE CONTENT (JSON), powers the site
 │   ├── settings.json           # footer text + contact/social links (site‑wide)
 │   ├── home.json               # homepage: hero, sections, cards, gallery, testimonials
@@ -124,11 +122,16 @@ From `/admin` the following are organised into friendly forms:
   Customised Sets: the collection heading/description and each product card
   (badge, image, name, description, link).
 
-### Where uploaded images are stored
+### Where images live (and the media library)
 
-Images added through the CMS are committed to **`assets/uploads/`** and
-referenced on the site as `/assets/uploads/<file>`. Original studio
-photography continues to live in `images/`.
+All photography lives in **`images/`**, and that folder *is* the CMS media
+library — so when the client clicks an image field they can **pick from the
+existing studio photos** or upload a new one. New uploads are committed to the
+same `images/` folder and referenced as `/images/<file>`.
+
+> Prefer to keep client uploads separate from the original photos? Change
+> `media_folder`/`public_folder` in `admin/config.yml` to `assets/uploads` —
+> just note the media library will then only show what’s in that folder.
 
 ### How changes are saved & published
 
