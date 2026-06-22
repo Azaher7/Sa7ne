@@ -1,24 +1,22 @@
 {
-  "header": {
-    "eyebrow": "Our Story",
-    "title": "Your Table Tells Your Guests Your Story",
-    "subtitle": "Sa7ne is not just dinnerware. It is the vocabulary of your home — handcrafted, personalised, and entirely yours."
+  "values": [],
+  "values_section": {
+    "eyebrow": "What We Stand For",
+    "title": "The Sa7ne Way"
   },
   "intro": {
     "image": "/images/image28.jpg",
     "image_alt": "Starlight cake stand with blessing plates — a Sa7ne tablescape",
     "eyebrow": "صَحْني — My Plate",
-    "title": "A Tablescape Is a Self-Portrait",
-    "p1": "Every home has a way of speaking. The way a table is set, the colours chosen, the pieces displayed — these are not decoration. They are a declaration. Sa7ne was born from the belief that the dinner table is one of the most intimate stages a host has, and that the ceramics on it should carry their personality as naturally as the food does.",
-    "p2": "Sa7ne — صَحْني, meaning \"my plate\" in Arabic — is a ceramics studio dedicated to personalising the act of hosting. Through handmade, customised pieces built around color, form, and meaning, we help homeowners compose tablescapes that tell their story: who they are, what they value, and how they welcome others into their space.",
-    "p3": "When you host at a Sa7ne table, your guests do not just sit down to a meal. They sit down to you."
+    "title": "Sa7ne is pronounced Sahne ",
+    "p1": "Every home has a way of speaking. The way a table is set, the colours chosen, the pieces displayed — these are not decoration. They are a declaration. Sa7ne was born from the belief that the dinner table is one of the most intimate experiences of a home. Sa7ne carries the personality of it's owner. ",
+    "p2": "Sa7ne — صَحْني, meaning \"my plate\" in Arabic — is a ceramics studio dedicated to personalising the act of hosting. ",
+    "p3": "A Sa7ne table is a story of you."
   },
-  "philosophy": {
-    "eyebrow": "The Philosophy",
-    "title": "Hosting Is Storytelling",
-    "p1": "There is a particular kind of host whose table you remember long after the evening ends. It is not the food alone — it is the feeling of intention. The sense that every object was chosen, that the colors speak to each other, that the table itself has a voice. Sa7ne exists to give that voice a form.",
-    "p2": "We think of each collection as a chapter in the homeowner's story. The blush speckled bowl that always holds the season's fruit. The honey-glazed platter that appears at every gathering. The cake stand painted with stars and the Arabic word for sustenance — رزق — set out on the night of a celebration. These pieces are not interchangeable. They belong to a specific home, a specific host, a specific way of being in the world.",
-    "p3": "Sa7ne captures the personality and vocabulary of the dinner host and hostess — their colour sensibility, their warmth, their humour, their heritage — and translates it into ceramic form. A table set with Sa7ne pieces is a table that could only belong to you."
+  "header": {
+    "eyebrow": "Our Story",
+    "title": "Your Table Tells Your Story",
+    "subtitle": "Sa7ne is not just dinnerware. It is your vocabulary displayed in handcrafted form. Each piece is personalised, and entirely yours."
   },
   "personality": {
     "image": "/images/image30.jpg",
@@ -38,28 +36,50 @@
     "button_label": "Request Your Moodboard →",
     "button_link": "custom.html"
   },
-  "gallery": [
-    { "image": "/images/image1.jpg", "alt": "Blush speckle bowl" },
-    { "image": "/images/image28.jpg", "alt": "Starlight cake stand and plates" },
-    { "image": "/images/image6.jpg", "alt": "Colorblock serving stand" },
-    { "image": "/images/image13.jpg", "alt": "Rose ruffle platter with lemons" },
-    { "image": "/images/image30.jpg", "alt": "Conversationalist plates" },
-    { "image": "/images/image17.jpg", "alt": "Ribbed coil bowl set" },
-    { "image": "/images/image2.jpg", "alt": "Honey wash bowl" },
-    { "image": "/images/hero_lifestyle3.jpg", "alt": "Sa7ne full table setting" }
-  ],
-  "values_section": {
-    "eyebrow": "What We Stand For",
-    "title": "The Sa7ne Way"
-  },
-  "values": [
-    { "icon": "🏡", "title": "The Home as Canvas", "desc": "We believe the dinner table is one of the most expressive spaces in a home — and that the right ceramics can transform it into a portrait of its owner." },
-    { "icon": "🎨", "title": "Color as Character", "desc": "Every Sa7ne palette is built around how you see color — your warmth, your boldness, your restraint. Pieces are made to belong together and to belong to you." },
-    { "icon": "✍️", "title": "Language Made Permanent", "desc": "From personalised names to Khaleeji phrases to Arabic words of blessing, Sa7ne fires the words of your home into ceramic that lasts." }
-  ],
   "cta": {
     "eyebrow": "Begin Your Collection",
     "title": "What Does Your Table Want to Say?",
     "subtitle": "Start with a custom order or a moodboard consultation — and let Sa7ne help you find the visual language of your home."
-  }
+  },
+  "philosophy": {
+    "eyebrow": "The Philosophy",
+    "title": "Hosting Is Storytelling",
+    "p1": "There is a particular kind of host whose table you remember long after the evening ends. It is not the food alone — it is the feeling of intention. The sense that every object was chosen, that the colors speak to each other, that the table itself has a voice. Sa7ne exists to give that voice a form.",
+    "p2": "We think of each collection as a chapter in the homeowner's story. The blush speckled bowl that always holds the season's fruit. The honey-glazed platter that appears at every gathering. The cake stand painted with stars and the Arabic word for sustenance — رزق — set out on the night of a celebration. These pieces are not interchangeable. They belong to a specific home, a specific host, a specific way of being in the world.",
+    "p3": "Sa7ne captures the personality and vocabulary of the dinner host and hostess — their colour sensibility, their warmth, their humour, their heritage — and translates it into ceramic form. A table set with Sa7ne pieces is a table that could only belong to you."
+  },
+  "gallery": [
+    {
+      "image": "/images/image1.jpg",
+      "alt": "Blush speckle bowl"
+    },
+    {
+      "image": "/images/image28.jpg",
+      "alt": "Starlight cake stand and plates"
+    },
+    {
+      "image": "/images/image6.jpg",
+      "alt": "Colorblock serving stand"
+    },
+    {
+      "image": "/images/image13.jpg",
+      "alt": "Rose ruffle platter with lemons"
+    },
+    {
+      "image": "/images/image30.jpg",
+      "alt": "Conversationalist plates"
+    },
+    {
+      "image": "/images/image17.jpg",
+      "alt": "Ribbed coil bowl set"
+    },
+    {
+      "image": "/images/image2.jpg",
+      "alt": "Honey wash bowl"
+    },
+    {
+      "image": "/images/hero_lifestyle3.jpg",
+      "alt": "Sa7ne full table setting"
+    }
+  ]
 }
