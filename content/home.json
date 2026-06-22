@@ -1,15 +1,15 @@
 {
   "about": {
-    "p1": "Sa7ne — صَحْني, meaning \"my plate\" in Arabic — is a ceramics brand dedicated to the storytelling of a homeowner through tablescapes. Every piece is handmade, customised, and curated so that each sa7ne piece is uniquely yours. ",
+    "p1": "Sa7ne — صَحْني, meaning \"my plate\" in Arabic. Sa7ne is a ceramics brand dedicated to the storytelling of a homeowner through ceramic pieces. Every piece is handmade, customised, and curated so that each sa7ne piece is uniquely yours. ",
     "p2": "Through it's collections of personalised dinnerware, Sa7ne personalises the act of hosting. It captures the personality and vocabulary of the dinner host and hostess — their colour sensibility, their warmth, their humour, their culture — and translates it into ceramic form. A table set with Sa7ne pieces is a table that could only belong to you.",
     "p3": "Sa7ne also helps homeowners visualise their tablescape through moodboards — composing Sa7ne pieces into a curated visual so you can see your home's story told before a single piece is made.",
-    "image_alt": "Sardet Sa7ne (translation: a sa7ne spread)",
+    "image_alt": "Sardet Sa7ne ",
     "secondary_btn_label": "Request a Moodboard →",
     "secondary_btn_link": "custom.html",
-    "eyebrow": "Our Story",
+    "eyebrow": "Tanslation: a Sa7ne spread",
     "primary_btn_label": "Read Our Story →",
-    "title_line1": "Your Table Tells Your",
-    "title_line2": "Story",
+    "title_line1": "Your Table ",
+    "title_line2": "Your. Story",
     "primary_btn_link": "about.html",
     "pills": [
       "Handmade",
@@ -17,11 +17,23 @@
       "Tablescape",
       "Storytelling"
     ],
-    "image": "/images/whatsapp-image-2026-06-22-at-9.39.03-pm-35-.jpeg"
+    "image": "/images/hero_lifestyle3.jpg"
   },
   "gallery": [
     {
-      "image": "/images/whatsapp-image-2026-06-22-at-9.39.03-pm-35-.jpeg"
+      "image": "/images/image29.jpg"
+    },
+    {
+      "image": "/images/image14.jpg"
+    },
+    {
+      "image": "/images/image22.jpg"
+    },
+    {
+      "image": "/images/image12.jpg"
+    },
+    {
+      "image": "/images/whatsapp-image-2026-06-22-at-9.39.03-pm-26-.jpeg"
     }
   ],
   "testimonials": [
@@ -62,19 +74,11 @@
     },
     {
       "tag": "Best Seller",
-      "image": "/images/image4.jpg",
-      "alt": "Rose Ruffle Platter",
-      "name": "Rose Ruffle Platter",
-      "desc": "An elongated oval platter in dusty rose with a graceful ruffled rim.",
+      "image": "/images/whatsapp-image-2026-06-22-at-9.39.03-pm-1-.jpeg",
+      "alt": "Medium Plate Riser ",
+      "name": "Plate Riser ",
+      "desc": "A plate riser in medium size to place all your serving dishes on top of.",
       "link": "product-rose-ruffle-platter.html"
-    },
-    {
-      "tag": "Limited",
-      "image": "/images/image5.jpg",
-      "alt": "Arc Leg Cake Stand",
-      "name": "Arc Leg Cake Stand",
-      "desc": "Ivory top on three colorful arched legs in teal, blue, and navy.",
-      "link": "product-arc-leg-cake-stand.html"
     },
     {
       "tag": "New",
@@ -95,10 +99,10 @@
     "secondary_btn_link": "custom.html",
     "title_em": "Dinnerware.",
     "primary_btn_label": "✦ Shop Collection",
-    "subtitle": "sa7ne (pronounced sahne) means my plate in arabic. we customise dinnerware so that every sa7ne piece is uniquely yours. ",
+    "subtitle": "sa7ne (pronounced sahne) means my plate in arabic. sa7ne is customised ceramic dinnerware - uniquely yours. ",
     "title": "Dress Your ",
     "primary_btn_link": "bowls.html",
-    "tag": "SA7NE is pronounced SAHNE",
+    "tag": "Customised Ceramics ",
     "image": "/images/hero_lifestyle3.jpg"
   },
   "collections_section": {
@@ -123,27 +127,27 @@
     {
       "name": "PLATTERS",
       "count": "2 designs",
-      "image": "/images/image13.jpg",
+      "image": "/images/image24.jpg",
       "alt": "PLATTERS Collection",
       "link": "platters.html"
     },
     {
       "name": "PLATE RISERS",
       "count": "3 designs",
-      "image": "/images/image21.jpg",
+      "image": "/images/image16.jpg",
       "alt": "PLATE RISERS Collection",
       "link": "risers.html"
     },
     {
       "name": "CAKE STANDS",
       "count": "2 designs",
-      "image": "/images/image15.jpg",
+      "image": "/images/image28.jpg",
       "alt": "CAKE STANDS Collection",
       "link": "stands.html"
     }
   ],
   "best_sellers_section": {
-    "eyebrow": "Most Loved",
+    "eyebrow": "Most Loved By You",
     "title": "Best Sellers"
   }
 }
