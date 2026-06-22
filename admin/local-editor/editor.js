@@ -1,14 +1,14 @@
 /*
- * Sa7ne — standalone visual content editor.
+ * Sa7ne — OPTIONAL offline preview editor (NOT the publishing CMS).
  *
- * Reads the REAL content files (content/*.json — the same single source of
- * truth the public website reads through cms.js), renders every section and
- * image with live previews, and lets the client edit them.
+ * The real CMS that publishes to the live site is Decap at /admin/. This tool
+ * is a no-login helper that reads the REAL content files (content/*.json — the
+ * same source the website reads through cms.js), renders every section and
+ * image with live previews, and lets you draft/preview edits.
  *
- * Saving: this is a static site with no backend, so "Save draft" writes to the
- * browser's localStorage (this browser only) and the public pages can overlay
- * that draft when "Preview" is on. To publish for everyone you Export the JSON
- * and commit it (or send it to the developer), or use Decap at /admin/cms/.
+ * Saving here writes to this browser's localStorage only (it does NOT publish);
+ * the public pages can overlay that draft when "Preview" is on. To publish for
+ * everyone, use the CMS at /admin/, or Export the JSON and commit it.
  */
 (function () {
   "use strict";

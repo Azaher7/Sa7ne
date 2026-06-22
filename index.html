@@ -198,13 +198,13 @@
 <script src="script.js"></script>
 <script src="cms.js"></script>
 <!-- Netlify Identity: catches invite / password-recovery links that land on the
-     site root and forwards the user to the CMS at /admin/cms/. Safe no-op otherwise. -->
+     site root and forwards the user to the CMS at /admin/. Safe no-op otherwise. -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", function (user) {
       if (!user) {
-        window.netlifyIdentity.on("login", function () { document.location.href = "/admin/cms/"; });
+        window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
       }
     });
   }
