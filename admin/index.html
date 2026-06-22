@@ -4,95 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>Sa7ne — Content Editor</title>
+  <title>Sa7ne — Content Manager</title>
   <link rel="icon" href="../images/logo.png" />
-  <style>
-    :root{
-      --butter:#E8E27A;--butter-light:#F5F2C0;--powder:#7D97D6;--powder-light:#B8CAF0;
-      --powder-mid:#9DB0E3;--ivory:#FAF8F0;--sand:#F0ECD8;--warm-white:#FEFCF5;
-      --stone:#E8E2CC;--clay-dark:#9A7A5A;--text-dark:#3A2E1C;--text-mid:#6B5B3A;--text-light:#9A8A68;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:'Cormorant Garamond',Georgia,serif;background:var(--warm-white);color:var(--text-dark);font-size:17px}
-    a{color:var(--clay-dark)}
-    header.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-      padding:12px 20px;background:rgba(254,252,245,.97);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--stone)}
-    .topbar img{height:34px}
-    .topbar h1{font-size:20px;font-style:italic;margin:0;font-weight:700}
-    .spacer{flex:1}
-    .btn{font-family:inherit;font-size:14px;font-weight:600;border-radius:22px;padding:8px 16px;cursor:pointer;
-      border:2px solid var(--powder-mid);background:var(--butter);color:var(--text-dark);transition:all .15s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-    .btn:hover{background:var(--powder-light)}
-    .btn.ghost{background:transparent}
-    .btn.small{font-size:12px;padding:5px 11px;border-width:1.5px}
-    .btn[disabled]{opacity:.45;cursor:not-allowed}
-    .toggle{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-mid)}
-    .banner{margin:0;padding:13px 20px;background:var(--butter-light);border-bottom:1.5px solid var(--powder-light);font-size:14.5px;line-height:1.5}
-    .banner b{color:var(--text-dark)}
-    .layout{display:flex;align-items:flex-start;gap:0;min-height:60vh}
-    nav.side{position:sticky;top:62px;flex:0 0 220px;align-self:flex-start;padding:18px 12px;border-right:1.5px solid var(--stone)}
-    nav.side .grp{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);margin:14px 8px 6px;font-weight:700}
-    nav.side button{display:flex;justify-content:space-between;gap:6px;width:100%;text-align:left;border:none;background:none;
-      font-family:inherit;font-size:15px;color:var(--text-mid);padding:7px 10px;border-radius:9px;cursor:pointer}
-    nav.side button:hover{background:var(--sand)}
-    nav.side button.active{background:var(--butter);color:var(--text-dark);font-weight:700}
-    nav.side .dot{color:var(--powder);font-weight:800}
-    main.panel{flex:1;padding:22px 26px 80px;max-width:860px}
-    .panel h2{font-size:26px;font-style:italic;margin:0 0 4px}
-    .panel .sub{color:var(--text-mid);font-size:14px;margin:0 0 20px}
-    fieldset{border:1.5px solid var(--stone);border-radius:14px;margin:0 0 16px;padding:10px 16px 16px;background:#fff}
-    fieldset>legend{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--clay-dark);padding:0 6px}
-    .field{margin:12px 0}
-    .field>label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-mid);margin-bottom:5px}
-    .field input[type=text],.field textarea{width:100%;font-family:inherit;font-size:15px;color:var(--text-dark);
-      background:var(--ivory);border:1.5px solid var(--stone);border-radius:10px;padding:9px 12px;outline:none}
-    .field input:focus,.field textarea:focus{border-color:var(--powder-mid)}
-    .field textarea{resize:vertical;min-height:70px;line-height:1.5}
-    .imgfield{display:flex;gap:14px;align-items:flex-start}
-    .imgfield .thumb{flex:0 0 116px;height:88px;border-radius:10px;border:1.5px solid var(--stone);background:var(--sand) center/cover no-repeat;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .imgfield .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .imgfield .thumb .ph{font-size:11px;color:var(--text-light);text-align:center;padding:4px}
-    .imgfield .grow{flex:1}
-    .arr{border:1.5px dashed var(--powder-mid);border-radius:14px;padding:8px 12px 12px;background:var(--warm-white)}
-    .arr .item{border:1.5px solid var(--stone);border-radius:12px;background:#fff;margin:10px 0;padding:6px 12px 12px}
-    .arr .item>.itemhd{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0 2px}
-    .arr .item>.itemhd .ttl{font-size:13px;font-weight:700;color:var(--clay-dark)}
-    .muted{color:var(--text-light);font-size:12.5px}
-    .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--text-dark);color:#fff;
-      padding:10px 18px;border-radius:22px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
-    .toast.show{opacity:1}
-    code{background:var(--sand);padding:1px 6px;border-radius:6px;font-size:13px}
-    @media(max-width:720px){.layout{flex-direction:column}nav.side{position:static;flex-basis:auto;width:100%;border-right:none;border-bottom:1.5px solid var(--stone);display:flex;flex-wrap:wrap;gap:4px}nav.side .grp{width:100%}main.panel{padding:18px}}
-  </style>
+  <!-- Decap reads its configuration from this file (same folder) -->
+  <link href="config.yml" type="text/yaml" rel="cms-config-url" />
 </head>
 <body>
-  <header class="topbar">
-    <img src="../images/logo.png" alt="Sa7ne">
-    <h1>Content Editor</h1>
-    <span class="spacer"></span>
-    <label class="toggle" title="When on, the public pages on THIS browser show your saved draft so you can preview it.">
-      <input type="checkbox" id="previewToggle"> Preview my draft on the site
-    </label>
-    <button class="btn ghost small" id="resetBtn" title="Discard the draft for the current section and reload the published content">Reset section</button>
-    <button class="btn small" id="exportBtn">⬇ Export this file</button>
-    <button class="btn small" id="exportAllBtn">⬇ Export all</button>
-    <button class="btn" id="saveBtn">Save draft</button>
-  </header>
-
-  <p class="banner">
-    <b>How saving works:</b> this is a static website, so edits here are saved <b>in this browser only</b>
-    (they don’t change the public site for visitors). To publish for everyone, either
-    <b>Export</b> the changed file(s) and send them to your developer to commit, or use the
-    full CMS at <a href="cms/">/admin/cms/</a> (which commits to GitHub once Netlify Identity is enabled).
-    Turn on <b>“Preview my draft on the site”</b> to see your changes on the real pages in this browser.
-  </p>
-
-  <div class="layout">
-    <nav class="side" id="side"></nav>
-    <main class="panel" id="panel"><p class="muted">Loading current website content…</p></main>
-  </div>
-
-  <div class="toast" id="toast"></div>
-  <script src="editor.js"></script>
+  <!-- Netlify Identity widget: handles client login for the CMS -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Decap CMS (the maintained successor to Netlify CMS), from the official CDN -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
