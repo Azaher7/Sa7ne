@@ -119,11 +119,24 @@
         if (ns && path) toLoad.push([ns, "content/" + path + ".json"]);
       });
     }
+    // Optional draft preview: the /admin editor can save a draft to localStorage.
+    // When the visitor turns preview on (same browser), overlay that draft.
+    var preview = false;
+    try { preview = localStorage.getItem("sa7ne:preview") === "on"; } catch (e) {}
+
     var data = {};
     Promise.all(toLoad.map(function (entry) {
-      return fetch(entry[1], { cache: "no-cache" })
+      var ns = entry[0], url = entry[1];
+      if (preview) {
+        try {
+          var dk = "sa7ne:content:" + url.replace(/^content\//, "").replace(/\.json$/, "");
+          var raw = localStorage.getItem(dk);
+          if (raw) { data[ns] = JSON.parse(raw); return Promise.resolve(); }
+        } catch (e) { /* fall through to fetch */ }
+      }
+      return fetch(url, { cache: "no-cache" })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (j) { if (j) data[entry[0]] = j; })
+        .then(function (j) { if (j) data[ns] = j; })
         .catch(function () { /* keep fallback markup */ });
     })).then(function () { hydrate(data); });
   }
