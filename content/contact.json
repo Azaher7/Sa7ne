@@ -1,6 +1,6 @@
 {
   "header": {
-    "eyebrow": "Get in Touch",
+    "eyebrow": "Get in Touch to Place an Order",
     "title": "We'd Love to Hear From You",
     "subtitle": "For orders, collaborations, moodboard requests, or any questions — reach out below. We aim to respond within 24 hours."
   },
@@ -18,10 +18,10 @@
     "note": "See our latest pieces →"
   },
   "hours": {
-    "title": "Kiss Me Thru The Phone ",
-    "line1": "Soulja Boy",
-    "line2": "6789998212",
-    "line3": "U wanna be me with me",
-    "timezone": "2008"
+    "title": "9 AM - 9 PM",
+    "line1": "Monday - Sunday",
+    "line2": "Dubai",
+    "line3": "United Arab Emirates",
+    "timezone": "GST"
   }
 }
