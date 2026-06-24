@@ -40,21 +40,21 @@
     {
       "text": "The Blush Speckle Bowl is even more stunning in person. The glaze has so much depth — it's become the centerpiece of our dining table and the perfect salad bowl.",
       "initials": "DS",
-      "name": "Dima Shriem",
+      "name": "Dima",
       "location": "Dubai, UAE",
       "avatar_class": "tav1"
     },
     {
       "text": "We ordered the Arc Leg Cake Stand for a birthday and it stole the show. So playful and well-made — guests kept asking where we got it.",
       "initials": "FK",
-      "name": "Faten Kanaan",
+      "name": "Faten",
       "location": "Dubai, UAE",
       "avatar_class": "tav2"
     },
     {
       "text": "The Rose Ruffle Platter is gorgeous for serving fruit. The handmade edges give it so much character — nothing like mass-produced pieces.",
       "initials": "AK",
-      "name": "Amani Koubar",
+      "name": "Amani",
       "location": "Dubai, UAE",
       "avatar_class": "tav3"
     }
@@ -66,7 +66,7 @@
   "best_sellers": [
     {
       "tag": "Best Seller",
-      "image": "/images/image1.jpg",
+      "image": "/images/image9.jpg",
       "alt": "Blush Speckle Bowl",
       "name": "Blush Speckle Bowl",
       "desc": "Soft blush pink with hand-flecked speckles and a wavy ruffled rim.",
@@ -113,7 +113,7 @@
     {
       "name": "CUSTOMISED SETS",
       "count": "2 designs",
-      "image": "/images/image27.jpg",
+      "image": "/images/image29.jpg",
       "alt": "CUSTOMISED SETS Collection",
       "link": "sets.html"
     },
