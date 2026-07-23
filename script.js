@@ -12,6 +12,31 @@ document.querySelectorAll('.otag').forEach(t=>{
 const submitBtn = document.getElementById('submitBtn');
 if (submitBtn) {
   submitBtn.addEventListener('click', () => {
+    const cfc = submitBtn.closest('.cfc');
+    if (cfc) {
+      const name = cfc.querySelector('input[type="text"].fi')?.value || '';
+      const email = cfc.querySelector('input[type="email"].fi')?.value || '';
+      const whatsapp = cfc.querySelector('input[type="tel"].fi')?.value || '';
+      const selects = cfc.querySelectorAll('select.fs');
+      const occasion = selects[0]?.value || '';
+      const collection = selects[1]?.value || '';
+      const quantity = selects[2]?.value || '';
+      const budget = selects[3]?.value || '';
+      const message = cfc.querySelector('textarea.fi')?.value || '';
+
+      const subject = 'New Custom Order Request — Sa7ne Website';
+      const body =
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'WhatsApp: ' + whatsapp + '\n' +
+        'Occasion: ' + occasion + '\n' +
+        'Base Collection: ' + collection + '\n' +
+        'Quantity: ' + quantity + '\n' +
+        'Budget (AED): ' + budget + '\n\n' +
+        'Order Details:\n' + message;
+
+      window.location.href = 'mailto:hellosa7ne@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
     submitBtn.textContent = "✓ Request Sent! We'll be in touch.";
     submitBtn.style.background = 'var(--powder-light)';
     setTimeout(() => {
@@ -51,15 +76,13 @@ document.querySelectorAll('.color-swatches').forEach(group => {
   });
 });
 
-// Add to cart button feedback.
-// Delegated from document so it also works on product cards that cms.js
-// renders from the CMS content after this script has run.
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.pd-actions .btn-p, .padd');
-  if (!btn) return;
-  if (btn.tagName === 'A' && btn.getAttribute('href') && btn.getAttribute('href') !== '#') return;
-  e.preventDefault();
-  const original = btn.textContent;
-  btn.textContent = btn.classList.contains('padd') ? '✓' : '✓ Added to Cart';
-  setTimeout(() => { btn.textContent = original; }, 1800);
+// Add to cart button feedback
+document.querySelectorAll('.pd-actions .btn-p, .padd').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    if (btn.tagName === 'A' && btn.getAttribute('href') && btn.getAttribute('href') !== '#') return;
+    e.preventDefault();
+    const original = btn.textContent;
+    btn.textContent = btn.classList.contains('padd') ? '✓' : '✓ Added to Cart';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
 });
