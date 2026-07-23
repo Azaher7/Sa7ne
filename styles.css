@@ -39,7 +39,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(254,252,245,0.96);backdrop
 /* HERO */
 .hero{min-height:78vh;background:var(--warm-white);display:flex;flex-direction:column;position:relative;overflow:hidden}
 .hero-img-wrap{position:relative;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;min-height:60vh}
+.hero-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,46,28,0.05) 0%,rgba(58,46,28,0.45) 100%);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:5% 6%}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--butter);border:1.5px solid var(--powder-mid);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--text-dark);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:18px}
 .hero-tag-dot{display:none}
