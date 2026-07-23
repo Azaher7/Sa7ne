@@ -1,5 +1,22 @@
 // Sa7ne shared interactivity
 
+// Mobile nav toggle
+const navEl = document.querySelector('nav');
+const navToggle = document.querySelector('.nav-toggle');
+if (navEl && navToggle) {
+  navToggle.addEventListener('click', () => {
+    const open = navEl.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Close the menu after tapping a link
+  navEl.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navEl.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 // Occasion tag selector (custom orders page)
 document.querySelectorAll('.otag').forEach(t=>{
   t.addEventListener('click',()=>{
