@@ -24,11 +24,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(254,252,245,0.96);backdrop
 .nav-links a:hover,.nav-links a.active{color:var(--text-dark);font-weight:700}
 .nav-cta{background:var(--butter);border:2px solid var(--powder-mid);color:var(--text-dark);font-family:var(--font);font-size:13px;font-weight:600;padding:8px 18px;border-radius:24px;cursor:pointer;transition:all 0.2s;text-decoration:none}
 .nav-cta:hover{background:var(--powder-light)}
-.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;padding:9px;margin-left:10px;background:none;border:none;cursor:pointer;flex-shrink:0}
-.nav-toggle span{display:block;width:100%;height:2px;border-radius:2px;background:var(--text-dark);transition:transform 0.25s ease,opacity 0.2s ease}
-nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-nav.open .nav-toggle span:nth-child(2){opacity:0}
-nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* MOBILE NAV TOGGLE */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
+.nav-toggle span{display:block;width:100%;height:2px;background:var(--text-dark);border-radius:2px;transition:all 0.25s}
+nav.nav-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+nav.nav-open .nav-toggle span:nth-child(2){opacity:0}
+nav.nav-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* SHARED LAYOUT */
 .ew{padding:72px 0}
@@ -204,7 +206,7 @@ footer{background:var(--powder);color:var(--ivory);padding:50px 6% 24px}
 .flogo img{height:48px;width:auto;display:block}
 .fdesc{font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.72;max-width:256px}
 .fsoc{display:flex;gap:7px;margin-top:16px}
-.fsb{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all 0.2s;color:var(--ivory)}
+.fsb{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all 0.2s;color:var(--ivory);text-decoration:none}
 .fsb:hover{background:var(--butter);color:var(--text-dark);border-color:var(--butter)}
 .fcol{flex:1;min-width:120px}
 .fct{font-size:11px;font-weight:600;color:var(--text-dark);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:13px}
@@ -226,24 +228,25 @@ footer{background:var(--powder);color:var(--ivory);padding:50px 6% 24px}
   .gg{columns:2 120px}
   .pd-grid{grid-template-columns:1fr}
   .pd-gallery{position:static}
+
+  nav{flex-wrap:wrap;padding:0 4%}
   .nav-toggle{display:flex}
-  .nav-cta{margin-left:auto}
+  .nav-cta{font-size:11px;padding:7px 12px}
   nav .nav-links{
-    display:none;position:absolute;top:64px;left:0;right:0;
-    flex-direction:column;align-items:stretch;justify-content:flex-start;flex:none;gap:2px;
-    padding:12px 6% 20px;
-    background:rgba(254,252,245,0.98);backdrop-filter:blur(14px);
-    border-bottom:1.5px solid var(--stone);
-    box-shadow:0 14px 26px rgba(58,46,28,0.10);
-    max-height:calc(100vh - 64px);overflow-y:auto;
+    display:none;position:absolute;top:64px;left:0;width:100%;
+    flex-direction:column;align-items:flex-start;gap:2px;
+    background:var(--warm-white,#fefcf5);border-bottom:1.5px solid var(--stone);
+    padding:14px 5% 22px;box-shadow:0 12px 24px rgba(0,0,0,0.08);
+    max-height:80vh;overflow-y:auto;
   }
-  nav.open .nav-links{display:flex}
-  .nav-links .nav-group{flex-direction:column;align-items:stretch;gap:0;width:100%;padding:4px 0}
-  .nav-links .nav-group-label{align-self:flex-start;margin:6px 0 4px}
-  .nav-links a{width:100%;padding:11px 4px;font-size:15px;border-bottom:1px solid var(--sand)}
-  .nav-links .nav-group a:last-child{border-bottom:none}
-  .nav-divider{display:none}
+  nav.nav-open .nav-links{display:flex}
+  .nav-links .nav-group{flex-direction:column;align-items:flex-start;gap:4px;width:100%;padding:10px 0}
+  .nav-links .nav-group-label{margin-bottom:2px}
+  .nav-links .nav-divider{width:100%;height:1px;margin:4px 0}
+  nav .nav-links a{padding:10px 0;width:100%;font-size:14px}
+  .contact-grid{grid-template-columns:1fr!important}
 }
+
 
 /* PRE-ORDER BADGE */
 .preorder-badge{

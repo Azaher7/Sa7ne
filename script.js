@@ -1,22 +1,5 @@
 // Sa7ne shared interactivity
 
-// Mobile nav toggle
-const navEl = document.querySelector('nav');
-const navToggle = document.querySelector('.nav-toggle');
-if (navEl && navToggle) {
-  navToggle.addEventListener('click', () => {
-    const open = navEl.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  // Close the menu after tapping a link
-  navEl.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navEl.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
-
 // Occasion tag selector (custom orders page)
 document.querySelectorAll('.otag').forEach(t=>{
   t.addEventListener('click',()=>{
@@ -103,3 +86,27 @@ document.querySelectorAll('.pd-actions .btn-p, .padd').forEach(btn => {
     setTimeout(() => { btn.textContent = original; }, 1800);
   });
 });
+
+// Mobile nav toggle
+const siteNav = document.getElementById('siteNav');
+const navToggle = document.getElementById('navToggle');
+if (siteNav && navToggle) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  // Close menu after tapping a nav link
+  siteNav.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  // Close menu if window is resized back to desktop width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 780) {
+      siteNav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}

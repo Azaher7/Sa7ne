@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav>
+<nav id="siteNav">
   <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="Sa7ne صَحْني"></a></div>
   <div class="nav-links">
     
@@ -22,11 +22,11 @@
       <a href="vases.html" class="">FLOWER VASES</a>
     </div>
     <div class="nav-divider"></div>
-    <a href="contact.html" class="active">CONTACT</a><a href="about.html" class="">ABOUT</a>
+    <a href="contact.html" class="active">CONTACT</a><a href="about.html" class="">OUR STORY</a>
     
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <a href="custom.html" class="nav-cta">Create Yours ✦</a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 
@@ -38,13 +38,13 @@
 </div>
 
 <div class="ew" style="background:var(--warm-white)"><div class="ei">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:start;max-width:900px;margin:0 auto">
+  <div class="contact-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:start;max-width:900px;margin:0 auto">
 
     <div style="display:flex;flex-direction:column;gap:18px">
       <div class="eyebrow">Contact Us</div>
       <div class="st" style="font-size:clamp(22px,2.5vw,32px);margin-bottom:8px">Reach Us Directly</div>
 
-      <a href="https://wa.me/971000000000" target="_blank" style="display:flex;align-items:center;gap:16px;background:white;border:1.5px solid var(--stone);border-radius:18px;padding:20px 22px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#25D366'" onmouseout="this.style.borderColor='var(--stone)'">
+      <a href="https://wa.me/971568267493" target="_blank" style="display:flex;align-items:center;gap:16px;background:white;border:1.5px solid var(--stone);border-radius:18px;padding:20px 22px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#25D366'" onmouseout="this.style.borderColor='var(--stone)'">
         <div style="width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">💬</div>
         <div>
           <div style="font-size:16px;font-weight:700;font-family:var(--font);color:var(--text-dark);margin-bottom:3px">WhatsApp Business</div>
@@ -62,10 +62,14 @@
         </div>
       </a>
 
-      <div style="background:var(--butter-light);border:1.5px solid var(--powder-mid);border-radius:18px;padding:20px 22px">
-        <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:6px">Studio Hours</div>
-        <div style="font-size:13px;color:var(--text-mid);line-height:1.7">Monday – Friday: 9am – 6pm<br>Saturday: 10am – 4pm<br>Sunday: Closed<br><span style="color:var(--clay-dark);font-weight:600">UAE time (GST +4)</span></div>
-      </div>
+      <a href="https://instagram.com/sa7ne_" target="_blank" style="display:flex;align-items:center;gap:16px;background:white;border:1.5px solid var(--stone);border-radius:18px;padding:20px 22px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='#E1306C'" onmouseout="this.style.borderColor='var(--stone)'">
+        <div style="width:52px;height:52px;border-radius:50%;background:#E1306C;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">📸</div>
+        <div>
+          <div style="font-size:16px;font-weight:700;font-family:var(--font);color:var(--text-dark);margin-bottom:3px">Instagram</div>
+          <div style="font-size:13px;color:var(--text-mid)">@sa7ne_</div>
+          <div style="font-size:12px;color:#E1306C;font-weight:600;margin-top:4px">Follow Us →</div>
+        </div>
+      </a>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:16px">
@@ -120,7 +124,7 @@
     <div class="fb">
       <div class="flogo"><img src="images/logo.png" alt="Sa7ne صَحْني" style="height:48px"></div>
       <div class="fdesc">Handmade ceramics celebrating personal stories. Made with love and clay.</div>
-      <div class="fsoc"><div class="fsb">📸</div><div class="fsb">📌</div><div class="fsb">💬</div><div class="fsb">✉️</div></div>
+      <div class="fsoc"><a class="fsb" href="https://instagram.com/sa7ne_" target="_blank" rel="noopener" aria-label="Instagram">📸</a><a class="fsb" href="https://wa.me/971568267493" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a><a class="fsb" href="mailto:hellosa7ne@gmail.com" aria-label="Email">✉️</a></div>
     </div>
     <div class="fcol">
       <div class="fct">CUSTOMISED</div>
